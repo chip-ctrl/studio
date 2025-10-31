@@ -24,7 +24,7 @@ export function TrustBar() {
         <h3 className="text-center text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-8">
           A leadership team with experience from world-class brands
         </h3>
-        <div className="mx-auto grid max-w-lg grid-cols-3 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 lg:mx-0 lg:max-w-none">
+        <div className="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-7 lg:mx-0 lg:max-w-none">
           {logos.map((logo) => (
             <img
               key={logo.name}
