@@ -14,6 +14,7 @@ const logos = [
   { name: 'Burger King', src: 'https://storage.googleapis.com/project-spark-b2481-avatars/3b018b32-9887-433b-a28a-784033092283.svg' },
   { name: 'Au Bon Pain', src: 'https://storage.googleapis.com/project-spark-b2481-avatars/61b36a14-41e9-4e78-958a-3603417726f5.svg' },
   { name: 'HMS Host', src: 'https://storage.googleapis.com/project-spark-b2481-avatars/6590f7d5-d020-431f-b565-5b4d758f5c49.svg' },
+  { name: 'The Real Chow Baby', src: 'https://storage.googleapis.com/project-spark-b2481-avatars/19f01509-3853-417d-81e0-b6edc6c64264.png'},
 ];
 
 export function TrustBar() {
