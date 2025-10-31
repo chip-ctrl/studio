@@ -27,7 +27,7 @@ const formSchema = z.object({
 
 const initialTeamMembers = [
   { name: 'Chip Joyner', title: 'CEO & Founder', previousExperience: '15+ years in restaurant leadership, built and scaled portfolios over $60M, including at the world\'s busiest airport. Graduate of Harvard Business School\'s OPM program.' },
-  { name: 'Joseph H. Handy', title: 'Chief Development Officer', previousExperience: '20+ years of executive leadership, raised over $120M in 3 months, former CEO of Georgia Aquarium and Clearwater Marine Aquarium.' },
+  { name: 'Joseph H. Handy', title: 'Chief Development Officer & Founder', previousExperience: '20+ years of executive leadership, raised over $120M in 3 months, former CEO of Georgia Aquarium and Clearwater Marine Aquarium.' },
   { name: 'Derrick Johnson', title: 'Chief Technology & Operations Director', previousExperience: '15+ years in franchise operations for brands like Cinnaholic and Levy Restaurants, specializing in operational optimization and technology integration.' },
   { name: 'Michael Auzenne', title: 'Chief Investment Advisor & Member Experience', previousExperience: '15+ years in investment banking, management consulting, and global restaurant leadership. Named one of QSR Magazine’s “28 Young Restaurant Leaders to Watch” (2021). Harvard Business School MBA.' },
 ];

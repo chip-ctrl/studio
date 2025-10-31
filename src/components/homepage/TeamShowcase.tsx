@@ -15,7 +15,7 @@ const teamMembers = [
   },
   {
     name: 'Joseph H. Handy',
-    title: 'Chief Development Officer',
+    title: 'Chief Development Officer & Founder',
     bio: 'Joe is an accomplished executive with over two decades of experience driving growth and fundraising across high-profile organizations. As Chief Development Officer, he leads strategic development, brand expansion, and partner relations, guiding the company’s growth through innovation and a deep commitment to community impact.',
     id: 'team-member-5',
   },
