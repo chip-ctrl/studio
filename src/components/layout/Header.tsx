@@ -5,7 +5,6 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import { Logo } from '../Logo';
 
 const navLinks = [
   { href: '/#about', label: 'About' },
@@ -21,8 +20,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
-        <Link href="/" className="mr-6 flex items-center gap-2">
-          <Logo className="h-6 w-auto" />
+        <Link href="/" className="mr-6 flex items-center gap-2 font-headline font-bold text-lg">
+          RTG
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           {navLinks.map((link) => (
@@ -55,7 +54,7 @@ export function Header() {
                   href="/"
                   className="flex items-center gap-2 text-lg font-semibold"
                 >
-                  <Logo className="h-6 w-auto" />
+                  RTG Resto Tech Group
                   <span className="sr-only">RTG Resto Tech Group</span>
                 </Link>
                 {navLinks.map((link) => (
