@@ -52,7 +52,7 @@ export const teamMembers = [
         id: 'team-member-18',
         name: 'Sean Palani',
         title: 'Senior Advisor, Brand and Culinary Partnerships',
-        bio: 'Sean specializes in lead generation and fostering brand and culinary partnerships. His expertise helps connect RTG with new opportunities and drive growth through strategic alliances.',
+        bio: 'Sean is a community-driven hospitality leader and connector who leverages deep relationships across the culinary, brand, and nonprofit sectors to bring people together with purpose. As Founder of The Pineapple Project, he provides strategic consulting to hospitality businesses nationwide, helping them strengthen brand identity, improve operations, and align with their communities.\n\nMost recently, Sean served as Director of Partnerships & Outreach for Giving Kitchen, where he built partnerships with 100+ restaurants and beverage brands across the Southeast, raising over $3 million in annual fundraising and expanding awareness for foodservice worker support. His earlier roles include Restaurant Operations Consultant at US Foods, driving $2.3 million in new business, and Senior Director of Operations at Sodexo, overseeing Delta Sky Club food and beverage operations.\n\nA passionate brand ambassador and mentor, Sean blends operational insight with authentic relationship-building to elevate guest experience, drive collaboration, and deliver measurable results for hospitality and community-focused ventures.\n\nEducation:\n\nB.A., International Management & Communication – Fairfield University\n\nA.O.S., Culinary Arts & Management – Le Cordon Bleu',
         imageUrl: 'https://storage.googleapis.com/project-spark-b2481-avatars/sean-palani.jpeg',
         imageHint: 'man professional'
     }
