@@ -19,12 +19,6 @@
       "imageHint": "commercial kitchen"
     },
     {
-      "id": "portfolio-1",
-      "description": "Image for the first portfolio item, a luxury hotel interior.",
-      "imageUrl": "https://images.unsplash.com/photo-1621293954908-907159247fc8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBob3RlbHxlbnwwfHx8fDE3NjE4Njk5NDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "luxury hotel"
-    },
-    {
       "id": "portfolio-2",
       "description": "Image for the second portfolio item, a modern restaurant.",
       "imageUrl": "https://images.unsplash.com/photo-1685040235380-a42a129ade4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2Rlcm4lMjByZXN0YXVyYW50fGVufDB8fHx8MTc2MTc3NDE3NXww&ixlib=rb-4.1.0&q=80&w=1080",

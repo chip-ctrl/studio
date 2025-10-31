@@ -15,12 +15,6 @@ const portfolioItems = [
     caseStudyUrl: '#success-story',
   },
   {
-    id: 'portfolio-1',
-    title: 'Prestige Hospitality Group',
-    category: 'Luxury Hotels',
-    stats: ['+40% Revenue Growth', '+25% Guest Satisfaction', '5 New Locations'],
-  },
-  {
     id: 'portfolio-2',
     title: 'Gourmet Innovations',
     category: 'Fine Dining',
