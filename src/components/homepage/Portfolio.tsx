@@ -4,8 +4,16 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 const portfolioItems = [
+  {
+    id: 'portfolio-wingstop',
+    title: 'Wingstop Portfolio Turnaround',
+    category: 'QSR Franchise',
+    stats: ['+13.4% Same-Store Sales', '50% Lower Staff Turnover', 'Top 1% in Order Accuracy'],
+    caseStudyUrl: '#success-story',
+  },
   {
     id: 'portfolio-1',
     title: 'Prestige Hospitality Group',
@@ -23,12 +31,6 @@ const portfolioItems = [
     title: 'ConnectSphere Tech',
     category: 'SaaS',
     stats: ['10x User Acquisition', 'AI-Powered Platform', 'Global Expansion'],
-  },
-  {
-    id: 'portfolio-4',
-    title: 'The Artisan Bean',
-    category: 'Boutique Cafes',
-    stats: ['+300% Foot Traffic', 'Award-Winning Roast', 'Franchise Model Launched'],
   },
 ];
 
@@ -52,44 +54,48 @@ export function Portfolio() {
           <CarouselContent>
             {portfolioItems.map((item) => {
               const itemImage = PlaceHolderImages.find(img => img.id === item.id);
+              const CardLinkWrapper = item.caseStudyUrl ? Link : 'div';
+              
               return (
                 <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1">
-                    <Card className="h-full flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-                      <CardHeader className="p-0">
-                        <div className="relative aspect-video">
-                          {itemImage && (
-                             <Image
-                               src={itemImage.imageUrl}
-                               alt={item.title}
-                               fill
-                               className="object-cover"
-                               data-ai-hint={itemImage.imageHint}
-                              />
-                          )}
-                           <div className="absolute top-4 right-4">
-                            <Badge variant="secondary">{item.category}</Badge>
+                  <div className="p-1 h-full">
+                    <CardLinkWrapper href={item.caseStudyUrl || ''} className="h-full block">
+                      <Card className="h-full flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <CardHeader className="p-0">
+                          <div className="relative aspect-video">
+                            {itemImage && (
+                               <Image
+                                 src={itemImage.imageUrl}
+                                 alt={item.title}
+                                 fill
+                                 className="object-cover"
+                                 data-ai-hint={itemImage.imageHint}
+                                />
+                            )}
+                             <div className="absolute top-4 right-4">
+                              <Badge variant="secondary">{item.category}</Badge>
+                            </div>
                           </div>
-                        </div>
-                      </CardHeader>
-                      <CardContent className="p-6 flex-grow">
-                        <CardTitle className="text-xl mb-2">{item.title}</CardTitle>
-                        <CardDescription>Key outcomes from our partnership:</CardDescription>
-                         <ul className="mt-4 space-y-2 text-sm text-foreground">
-                          {item.stats.map(stat => (
-                            <li key={stat} className="flex items-center">
-                              <ArrowUpRight className="h-4 w-4 mr-2 text-primary" />
-                              {stat}
-                            </li>
-                          ))}
-                        </ul>
-                      </CardContent>
-                      <CardFooter className="p-6 pt-0">
-                        <span className="text-sm text-accent-foreground font-semibold flex items-center">
-                          View Case Study <ArrowRight className="h-4 w-4 ml-1" />
-                        </span>
-                      </CardFooter>
-                    </Card>
+                        </CardHeader>
+                        <CardContent className="p-6 flex-grow">
+                          <CardTitle className="text-xl mb-2">{item.title}</CardTitle>
+                          <CardDescription>Key outcomes from our partnership:</CardDescription>
+                           <ul className="mt-4 space-y-2 text-sm text-foreground">
+                            {item.stats.map(stat => (
+                              <li key={stat} className="flex items-center">
+                                <ArrowUpRight className="h-4 w-4 mr-2 text-primary" />
+                                {stat}
+                              </li>
+                            ))}
+                          </ul>
+                        </CardContent>
+                        <CardFooter className="p-6 pt-0">
+                          <span className="text-sm text-accent-foreground font-semibold flex items-center">
+                            View Case Study <ArrowRight className="h-4 w-4 ml-1" />
+                          </span>
+                        </CardFooter>
+                      </Card>
+                    </CardLinkWrapper>
                   </div>
                 </CarouselItem>
               );

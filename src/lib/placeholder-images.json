@@ -13,6 +13,12 @@
       "imageHint": "business meeting"
     },
     {
+      "id": "portfolio-wingstop",
+      "description": "Image for the Wingstop success story, showing a restaurant interior.",
+      "imageUrl": "https://images.unsplash.com/photo-1552566626-52f8b828add9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50fGVufDB8fHx8MTc2MjAwMzY2MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "restaurant interior"
+    },
+    {
       "id": "portfolio-1",
       "description": "Image for the first portfolio item, a luxury hotel interior.",
       "imageUrl": "https://images.unsplash.com/photo-1621293954908-907159247fc8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBob3RlbHxlbnwwfHx8fDE3NjE4Njk5NDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -31,27 +37,21 @@
       "imageHint": "tech office"
     },
     {
-      "id": "portfolio-4",
-      "description": "Image for the fourth portfolio item, a boutique coffee shop.",
-      "imageUrl": "https://images.unsplash.com/photo-1534040385115-33dcb3acba5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29mZmVlJTIwc2hvcHxlbnwwfHx8fDE3NjE4MzQwNTl8MA&ixlib-rb-4.1.0&q=80&w=1080",
-      "imageHint": "coffee shop"
-    },
-    {
       "id": "franchise-spotlight",
       "description": "Image for the franchise spotlight section, showing a successful franchise storefront.",
-      "imageUrl": "https://images.unsplash.com/photo-1542581482-851c38ee4b94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzdG9yZSUyMGZyb250fGVufDB8fHx8MTc2MTgxODIwNXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1542581482-851c38ee4b94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzdG9yZSUyMGZyb250fGVufDB8fHx8MTc2MTgxODIwNXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "store front"
     },
     {
       "id": "leadership-preview",
       "description": "Image of the leadership team for the preview section.",
-      "imageUrl": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxidXNpbmVzcyUyMHRlYW18ZW58MHx8fHwxNzYxODQ4MTQ3fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxidXNpbmVzcyUyMHRlYW18ZW58MHx8fHwxNzYxODQ4MTQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "business team"
     },
     {
       "id": "team-member-1",
       "description": "Portrait of team member Sarah Chen.",
-      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2MTgwMzQ2MHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2MTgwMzQ2MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "woman portrait"
     },
     {
