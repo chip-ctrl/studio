@@ -2,9 +2,10 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Mountain } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import { Logo } from '../Logo';
 
 const navLinks = [
   { href: '/#about', label: 'About' },
@@ -20,7 +21,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
         <Link href="/" className="mr-6 flex items-center gap-2">
-          <Mountain className="h-6 w-6 text-primary" />
+          <Logo className="h-6 w-auto text-primary" />
           <span className="font-bold text-lg">RTG Navigator</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
@@ -54,7 +55,7 @@ export function Header() {
                   href="/"
                   className="flex items-center gap-2 text-lg font-semibold"
                 >
-                  <Mountain className="h-6 w-6 text-primary" />
+                  <Logo className="h-6 w-auto text-primary" />
                   <span className="sr-only">RTG Navigator</span>
                 </Link>
                 {navLinks.map((link) => (

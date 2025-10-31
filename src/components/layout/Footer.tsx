@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Mountain, Linkedin, Instagram } from 'lucide-react';
+import { Linkedin, Instagram } from 'lucide-react';
+import { Logo } from '../Logo';
 
 export function Footer() {
   return (
@@ -10,7 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2">
-              <Mountain className="h-6 w-6 text-primary" />
+              <Logo className="h-6 w-auto text-primary" />
               <span className="font-bold text-lg">RTG Navigator</span>
             </Link>
             <p className="text-sm text-muted-foreground">Investing in Great Businesses. Elevating Them with Technology and Experience.</p>
