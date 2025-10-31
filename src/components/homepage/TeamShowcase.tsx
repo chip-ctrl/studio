@@ -20,10 +20,10 @@ const teamMembers = [
     id: 'team-member-5',
   },
   {
-    name: 'Sarah Chen',
-    title: 'CEO & Founder',
-    bio: 'With over two decades in hospitality, Sarah is a visionary leader dedicated to innovation and guest satisfaction. Her experience at a Fortune 500 hotel chain honed her skills in scaling operations while maintaining a people-first culture, a philosophy she embeds in every RTG venture.',
-    id: 'team-member-1',
+    name: 'Derrick Johnson',
+    title: 'Chief Technology & Operations Director',
+    bio: 'Derrick drives the integration of advanced technology and scalable systems across RTG’s portfolio. With 15+ years in franchise operations for brands like Cinnaholic and Levy Restaurants, he specializes in operational optimization and leveraging data to enhance efficiency and customer experience.',
+    id: 'team-member-6',
   },
   {
     name: 'David Lee',
