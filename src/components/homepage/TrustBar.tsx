@@ -18,6 +18,7 @@ const logos = [
   { name: 'Georgia Aquarium', src: 'https://storage.googleapis.com/project-spark-b2481-avatars/a8947672-03f4-43b3-851c-8067a31518f8.svg' },
   { name: 'Sodexo', src: 'https://storage.googleapis.com/project-spark-b2481-avatars/a689f743-3b32-487a-8533-33434680d2f8.svg' },
   { name: 'Levy Restaurants', src: 'https://storage.googleapis.com/project-spark-b2481-avatars/b442145c-2d57-4148-84e0-a337e6512391.svg' },
+  { name: 'Sky Zone', src: 'https://storage.googleapis.com/project-spark-b2481-avatars/d816f195-25f1-4191-a89c-e356f6c91a32.svg' },
 ];
 
 export function TrustBar() {
