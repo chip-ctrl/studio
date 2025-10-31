@@ -10,8 +10,9 @@ import { Logo } from '../Logo';
 const navLinks = [
   { href: '/#about', label: 'About' },
   { href: '/#portfolio', label: 'Portfolio' },
-  { href: '/#contact', label: 'Contact' },
   { href: '/team', label: 'Team' },
+  { href: '/invest', label: 'Invest' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 export function Header() {
