@@ -6,7 +6,7 @@ export function Logo({ className }: { className?: string }) {
       className={className}
       viewBox="0 0 150 40"
       xmlns="http://www.w3.org/2000/svg"
-      aria-label="RTG Navigator Logo"
+      aria-label="RTG Resto Tech Group Logo"
       fill="none"
       height="24"
       width="auto"

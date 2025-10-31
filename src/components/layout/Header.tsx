@@ -22,7 +22,7 @@ export function Header() {
       <div className="container flex h-14 items-center">
         <Link href="/" className="mr-6 flex items-center gap-2">
           <Logo className="h-6 w-auto text-primary" />
-          <span className="font-bold text-lg">RTG Navigator</span>
+          <span className="font-bold text-lg">RTG Resto Tech Group</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           {navLinks.map((link) => (
@@ -56,7 +56,7 @@ export function Header() {
                   className="flex items-center gap-2 text-lg font-semibold"
                 >
                   <Logo className="h-6 w-auto text-primary" />
-                  <span className="sr-only">RTG Navigator</span>
+                  <span className="sr-only">RTG Resto Tech Group</span>
                 </Link>
                 {navLinks.map((link) => (
                   <Link

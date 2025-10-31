@@ -12,7 +12,7 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2">
               <Logo className="h-6 w-auto text-primary" />
-              <span className="font-bold text-lg">RTG Navigator</span>
+              <span className="font-bold text-lg">RTG Resto Tech Group</span>
             </Link>
             <p className="text-sm text-muted-foreground">Investing in Great Businesses. Elevating Them with Technology and Experience.</p>
           </div>
@@ -56,7 +56,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} RTG Navigator. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} RTG Resto Tech Group. All rights reserved. A Delaware Company.</p>
         </div>
       </div>
     </footer>

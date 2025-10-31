@@ -39,7 +39,7 @@ const prompt = ai.definePrompt({
   name: 'generateTeamBioBlurbsPrompt',
   input: {schema: GenerateTeamBioBlurbsInputSchema},
   output: {schema: GenerateTeamBioBlurbsOutputSchema},
-  prompt: `You are tasked with creating short, engaging bio blurbs for the leadership team of RTG Navigator, reflecting a people-first leadership style.
+  prompt: `You are tasked with creating short, engaging bio blurbs for the leadership team of RTG Resto Tech Group, reflecting a people-first leadership style.
 
   Given the following details for each team member, generate a bio blurb of approximately 50-75 words that highlights their experience and approachability. The tone should be confident, refined, and professional, yet warm and inviting.
 

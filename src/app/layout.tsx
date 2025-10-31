@@ -6,8 +6,8 @@ import { Footer } from '@/components/layout/Footer';
 import { Montserrat, Lora } from 'next/font/google';
 
 export const metadata: Metadata = {
-  title: 'RTG Navigator',
-  description: 'Investing in Great Businesses. Elevating Them with Technology and Experience.',
+  title: 'RTG Resto Tech Group',
+  description: 'A Delaware Company',
 };
 
 const montserrat = Montserrat({
