@@ -12,8 +12,8 @@ const portfolioItems = [
     category: 'QSR Franchise',
     stats: ['+13.4% Same-Store Sales', '50% Lower Staff Turnover', 'Top 1% in Order Accuracy'],
     caseStudyUrl: '#success-story',
-    imageUrl: 'https://storage.googleapis.com/project-spark-b2481-avatars/b95b8744-9333-4f36-8a88-21d3a51f33f0.png',
-    imageHint: 'commercial kitchen',
+    imageUrl: 'https://cdn.worldvectorlogo.com/logos/wingstop-logo.svg',
+    imageHint: 'Wingstop logo',
   },
 ];
 
@@ -44,12 +44,12 @@ export function Portfolio() {
                     <CardLinkWrapper href={item.caseStudyUrl || ''} className="h-full block">
                       <Card className="h-full flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
                         <CardHeader className="p-0">
-                          <div className="relative aspect-video">
+                          <div className="relative aspect-video bg-green-600 p-8">
                                <Image
                                  src={item.imageUrl}
                                  alt={item.title}
                                  fill
-                                 className="object-cover"
+                                 className="object-contain"
                                  data-ai-hint={item.imageHint}
                                 />
                              <div className="absolute top-4 right-4">
