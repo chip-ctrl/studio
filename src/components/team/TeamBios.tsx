@@ -19,6 +19,7 @@ const teamMemberSchema = z.object({
   name: z.string().min(2, 'Name is required.'),
   title: z.string().min(2, 'Title is required.'),
   previousExperience: z.string().min(10, 'Experience details are required.'),
+  education: z.string().min(2, 'Education is required.'),
 });
 
 const formSchema = z.object({
@@ -26,10 +27,10 @@ const formSchema = z.object({
 });
 
 const initialTeamMembers = [
-  { name: 'Chip Joyner', title: 'CEO & Founder', previousExperience: '15+ years in restaurant leadership, built and scaled portfolios over $60M, including at the world\'s busiest airport. Graduate of Harvard Business School\'s OPM program.' },
-  { name: 'Joseph H. Handy', title: 'Chief Development Officer & Founder', previousExperience: '20+ years of executive leadership, raised over $120M in 3 months, former CEO of Georgia Aquarium and Clearwater Marine Aquarium.' },
-  { name: 'Derrick Johnson', title: 'Chief Technology & Operations Director', previousExperience: '15+ years in franchise operations for brands like Cinnaholic and Levy Restaurants, specializing in operational optimization and technology integration.' },
-  { name: 'Michael Auzenne', title: 'Chief Investment Advisor & Member Experience', previousExperience: '15+ years in investment banking, management consulting, and global restaurant leadership. Named one of QSR Magazine’s “28 Young Restaurant Leaders to Watch” (2021). Harvard Business School MBA.' },
+  { name: 'Chip Joyner', title: 'CEO & Founder', previousExperience: '15+ years in restaurant leadership, scaled portfolios over $60M.', education: 'Harvard Business School OPM Program' },
+  { name: 'Joseph H. Handy', title: 'Chief Development Officer & Founder', previousExperience: '20+ years executive leadership, raised over $120M, former CEO of Georgia Aquarium.', education: 'Attended University of Louisville' },
+  { name: 'Derrick Johnson', title: 'Chief Technology & Operations Director', previousExperience: '15+ years in franchise operations (Cinnaholic, Levy Restaurants), tech integration expert.', education: 'University of Tennessee at Chattanooga' },
+  { name: 'Michael Auzenne', title: 'Chief Investment Advisor & Member Experience', previousExperience: '15+ years in investment banking, management consulting, and global restaurant leadership.', education: 'Harvard Business School MBA' },
 ];
 
 export function TeamBios() {
@@ -90,7 +91,7 @@ export function TeamBios() {
             {fields.map((field, index) => (
               <Card key={field.id} className="bg-secondary/50">
                 <CardContent className="p-4">
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
                     <FormField
                       control={form.control}
                       name={`teamMemberDetails.${index}.name`}
@@ -105,12 +106,19 @@ export function TeamBios() {
                         <FormItem><FormLabel>Title</FormLabel><FormControl><Input {...field} /></FormControl><FormMessage /></FormItem>
                       )}
                     />
+                     <FormField
+                      control={form.control}
+                      name={`teamMemberDetails.${index}.previousExperience`}
+                      render={({ field }) => (
+                        <FormItem className="flex-grow"><FormLabel>Previous Experience</FormLabel><FormControl><Input {...field} /></FormControl><FormMessage /></FormItem>
+                      )}
+                    />
                     <div className="flex items-start gap-2">
-                       <FormField
+                      <FormField
                         control={form.control}
-                        name={`teamMemberDetails.${index}.previousExperience`}
+                        name={`teamMemberDetails.${index}.education`}
                         render={({ field }) => (
-                          <FormItem className="flex-grow"><FormLabel>Previous Experience</FormLabel><FormControl><Input {...field} /></FormControl><FormMessage /></FormItem>
+                          <FormItem className="flex-grow"><FormLabel>Education</FormLabel><FormControl><Input {...field} /></FormControl><FormMessage /></FormItem>
                         )}
                       />
                        <Button type="button" variant="ghost" size="icon" onClick={() => remove(index)} className="mt-8 text-muted-foreground hover:text-destructive">
@@ -127,7 +135,7 @@ export function TeamBios() {
             <Button
               type="button"
               variant="outline"
-              onClick={() => append({ name: '', title: '', previousExperience: '' })}
+              onClick={() => append({ name: '', title: '', previousExperience: '', education: '' })}
             >
               <PlusCircle className="mr-2 h-4 w-4" />
               Add Team Member
