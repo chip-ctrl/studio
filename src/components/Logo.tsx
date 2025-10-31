@@ -42,8 +42,9 @@ export function Logo({ className }: { className?: string }) {
         G
       </text>
       <path
-        d="M 12 35 L 35 15 L 100 0"
-        stroke="hsl(var(--primary))"
+        d="M 12 35 L 35 15 L 100 15"
+        stroke="currentColor"
+        className="text-foreground"
         strokeWidth="4"
         strokeLinecap="round"
         fill="none"
