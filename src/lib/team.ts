@@ -40,6 +40,14 @@ export const teamMembers = [
         imageUrl: 'https://storage.googleapis.com/project-spark-b2481-avatars/b5f39151-5121-4f11-857c-2b28c8942b26.jpeg',
         imageHint: 'man professional'
     },
+    {
+        id: 'team-member-17',
+        name: 'Maurice Watson',
+        title: 'Senior Investment Advisor',
+        bio: 'Maurice Watson is an accomplished business executive and financial analyst with over two decades of experience in corporate finance, lending, and strategic business development. A graduate of Clemson University with a B.S. in Chemical Engineering and an MBA from the University of Virginia’s Darden School of Business, Maurice brings deep expertise in financial structuring and portfolio management across diverse industries.\n\nThroughout his career, Maurice has held senior leadership roles at Wells Fargo, SunTrust Bank, and Wachovia, managing multimillion-dollar portfolios and spearheading revenue growth in corporate and leveraged finance. He has led underwriting and risk management for beverage, healthcare, and middle-market sectors, consistently driving measurable business outcomes and client success.\n\nWith a foundation in engineering and a proven record of analytical excellence, Maurice combines strategic insight with disciplined execution — advising RTG and its partners on investment opportunities, capital strategy, and financial performance',
+        imageUrl: 'https://picsum.photos/seed/maurice/256/256',
+        imageHint: 'man professional'
+    }
 ];
 
 export const leadershipTeam = teamMembers.slice(0, 4);
