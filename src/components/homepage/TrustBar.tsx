@@ -14,14 +14,14 @@ export function TrustBar() {
     <div className="py-8">
       <div className="flex justify-center items-center gap-8 md:gap-12 flex-wrap">
         {logos.map((logo) => (
-          <div key={logo.name} className="relative" style={{ width: logo.width, height: logo.height }}>
-            <Image
-              src={logo.url}
-              alt={`${logo.name} logo`}
-              fill
-              className="object-contain"
-            />
-          </div>
+          <img
+            key={logo.name}
+            src={logo.url}
+            alt={`${logo.name} logo`}
+            width={logo.width}
+            height={logo.height}
+            className="object-contain"
+          />
         ))}
       </div>
     </div>
