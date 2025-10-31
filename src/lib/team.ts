@@ -47,6 +47,14 @@ export const teamMembers = [
         bio: 'Maurice Watson is an accomplished business executive and financial analyst with over two decades of experience in corporate finance, lending, and strategic business development. A graduate of Clemson University with a B.S. in Chemical Engineering and an MBA from the University of Virginia’s Darden School of Business, Maurice brings deep expertise in financial structuring and portfolio management across diverse industries.\n\nThroughout his career, Maurice has held senior leadership roles at Wells Fargo, SunTrust Bank, and Wachovia, managing multimillion-dollar portfolios and spearheading revenue growth in corporate and leveraged finance. He has led underwriting and risk management for beverage, healthcare, and middle-market sectors, consistently driving measurable business outcomes and client success.\n\nWith a foundation in engineering and a proven record of analytical excellence, Maurice combines strategic insight with disciplined execution — advising RTG and its partners on investment opportunities, capital strategy, and financial performance',
         imageUrl: 'https://storage.googleapis.com/project-spark-b2481-avatars/986a89c3-5683-4876-905c-f761595865f1.jpeg',
         imageHint: 'man professional'
+    },
+    {
+        id: 'team-member-18',
+        name: 'Sean Palani',
+        title: 'Advisor and Lead Generation Brand and Culinary Partnerships',
+        bio: 'Sean specializes in lead generation and fostering brand and culinary partnerships. His expertise helps connect RTG with new opportunities and drive growth through strategic alliances.',
+        imageUrl: 'https://picsum.photos/seed/sean/400/400',
+        imageHint: 'man professional'
     }
 ];
 
