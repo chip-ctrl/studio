@@ -3,11 +3,23 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { Montserrat, Lora } from 'next/font/google';
 
 export const metadata: Metadata = {
   title: 'RTG Navigator',
   description: 'Investing in Great Businesses. Elevating Them with Technology and Experience.',
 };
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-headline',
+  weight: ['400', '500', '600', '700'],
+});
+
+const lora = Lora({
+  subsets: ['latin'],
+  variable: '--font-body',
+});
 
 export default function RootLayout({
   children,
@@ -15,12 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-      </head>
+    <html lang="en" className={`${montserrat.variable} ${lora.variable} scroll-smooth`}>
       <body className="font-body antialiased">
         <div className="flex flex-col min-h-screen">
           <Header />

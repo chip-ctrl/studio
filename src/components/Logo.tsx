@@ -12,8 +12,8 @@ export function Logo({ className }: { className?: string }) {
       width="auto"
     >
       <text
-        fontFamily="sans-serif"
-        fontSize="32"
+        fontFamily="Montserrat, sans-serif"
+        fontSize="36"
         fontWeight="bold"
         y="30"
         fill="currentColor"
@@ -22,23 +22,24 @@ export function Logo({ className }: { className?: string }) {
         R
       </text>
       <text
-        fontFamily="sans-serif"
-        fontSize="32"
+        fontFamily="Montserrat, sans-serif"
+        fontSize="36"
         fontWeight="bold"
         x="25"
         y="30"
-        className="text-red-600"
-        fill="currentColor"
+        fill="hsl(var(--primary))"
       >
         TG
       </text>
       <path
-        d="M15 35 L50 8 L140 8"
-        stroke="black"
-        strokeWidth="3"
+        d="M15 35 L75 1 L140 35"
+        stroke="hsl(var(--primary))"
+        strokeWidth="4"
         fill="none"
-        className="stroke-current text-foreground"
-      />
+        transform="translate(-5, -3)"
+      >
+        <animate attributeName="d" from="M15 35 L40 15 L140 15" to="M15 35 L75 1 L140 35" dur="0.5s" fill="freeze" />
+      </path>
     </svg>
   );
 }

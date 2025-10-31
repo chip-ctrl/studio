@@ -57,7 +57,7 @@ export function InquiryForm() {
       <div className="container">
         <Card className="max-w-2xl mx-auto shadow-lg">
           <CardHeader>
-            <CardTitle className="text-3xl text-primary">Let's Connect</CardTitle>
+            <CardTitle className="text-3xl">Let's Connect</CardTitle>
             <CardDescription>
               Whether you're looking to sell, partner, or franchise, we're ready to listen.
             </CardDescription>
@@ -131,7 +131,7 @@ export function InquiryForm() {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90" disabled={isPending}>
+                <Button type="submit" size="lg" className="w-full" disabled={isPending}>
                   {isPending ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>

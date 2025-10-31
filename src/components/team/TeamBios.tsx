@@ -127,7 +127,7 @@ export function TeamBios() {
               <PlusCircle className="mr-2 h-4 w-4" />
               Add Team Member
             </Button>
-            <Button type="submit" className="bg-accent text-accent-foreground hover:bg-accent/90" disabled={isPending}>
+            <Button type="submit" disabled={isPending}>
               {isPending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Wand2 className="mr-2 h-4 w-4" />}
               Generate Bios
             </Button>

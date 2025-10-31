@@ -29,10 +29,10 @@ export function Hero() {
           100+ years of operational excellence meets innovation.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild size="lg" variant="secondary">
+          <Button asChild size="lg">
             <Link href="#contact">Sell Your Business</Link>
           </Button>
-          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+          <Button asChild size="lg" variant="secondary">
             <Link href="#franchise">Franchise With Us</Link>
           </Button>
           <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
