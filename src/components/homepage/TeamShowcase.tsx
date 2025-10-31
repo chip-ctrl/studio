@@ -19,7 +19,7 @@ export function TeamShowcase() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {leadershipTeam.map((member) => (
-            <Card key={member.name} className="flex flex-col text-center items-center p-6">
+            <Card key={member.id} className="flex flex-col text-center items-center p-6">
               <Avatar className="h-24 w-24 mb-4">
                 <AvatarImage src={member.imageUrl} alt={member.name} />
                 <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
