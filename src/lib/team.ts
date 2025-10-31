@@ -96,6 +96,14 @@ export const teamMembers = [
         imageUrl: 'https://picsum.photos/seed/15/400/400',
         imageHint: 'woman professional'
     },
+    {
+        id: 'team-member-16',
+        name: 'Daryl Lesure',
+        title: 'Senior Advisor, Supply Chain & Procurement',
+        bio: 'Daryl brings over 20 years of supply chain leadership in the restaurant industry, specializing in procurement, logistics, and cost optimization for multi-unit brands.',
+        imageUrl: 'https://picsum.photos/seed/16/400/400',
+        imageHint: 'man professional'
+    },
 ];
 
 export const leadershipTeam = teamMembers.slice(0, 4);
