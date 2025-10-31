@@ -21,8 +21,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
         <Link href="/" className="mr-6 flex items-center gap-2">
-          <Logo className="h-6 w-auto text-primary" />
-          <span className="font-bold text-lg">RTG Resto Tech Group</span>
+          <Logo className="h-6 w-auto" />
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           {navLinks.map((link) => (
@@ -39,7 +38,7 @@ export function Header() {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end gap-4">
-          <Button asChild variant="ghost" className="hidden md:flex">
+          <Button asChild className="hidden md:flex">
             <Link href="/#contact">Partner With RTG</Link>
           </Button>
           <Sheet>
@@ -55,7 +54,7 @@ export function Header() {
                   href="/"
                   className="flex items-center gap-2 text-lg font-semibold"
                 >
-                  <Logo className="h-6 w-auto text-primary" />
+                  <Logo className="h-6 w-auto" />
                   <span className="sr-only">RTG Resto Tech Group</span>
                 </Link>
                 {navLinks.map((link) => (

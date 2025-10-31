@@ -11,8 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2">
-              <Logo className="h-6 w-auto text-primary" />
-              <span className="font-bold text-lg">RTG Resto Tech Group</span>
+              <Logo className="h-6 w-auto" />
             </Link>
             <p className="text-sm text-muted-foreground">Investing in Great Businesses. Elevating Them with Technology and Experience.</p>
           </div>

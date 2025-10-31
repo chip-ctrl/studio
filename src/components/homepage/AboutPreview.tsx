@@ -2,29 +2,57 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Compass, ShieldCheck, Cpu, Handshake, BarChart } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+
+const principles = [
+  {
+    icon: <Compass className="w-8 h-8 text-primary" />,
+    title: 'Hospitality First',
+    description: 'People and experience remain at the heart of every brand.',
+  },
+  {
+    icon: <Cpu className="w-8 h-8 text-primary" />,
+    title: 'Technology-Driven',
+    description: 'Data and systems are catalysts for smarter, faster decisions.',
+  },
+  {
+    icon: <Handshake className="w-8 h-8 text-primary" />,
+    title: 'Partnership Culture',
+    description: 'We grow together — with operators, franchisees, and investors.',
+  },
+  {
+    icon: <BarChart className="w-8 h-8 text-primary" />,
+    title: 'Operational Excellence',
+    description: 'Excellence isn’t optional; it’s engineered through process and leadership.',
+  },
+  {
+    icon: <ShieldCheck className="w-8 h-8 text-primary" />,
+    title: 'Legacy and Growth',
+    description: 'Protect the brand’s DNA while scaling its impact.',
+  },
+];
 
 export function AboutPreview() {
   const aboutImage = PlaceHolderImages.find(img => img.id === 'about-preview');
 
   return (
-    <section id="about" className="py-16 md:py-24 bg-background">
-      <div className="container">
+    <section id="about" className="py-16 md:py-24 bg-secondary">
+      <div className="container space-y-16">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div className="space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary">A Partnership Built on Trust and Expertise</h2>
-            <p className="text-lg text-muted-foreground">
-              RTG Resto Tech Group is more than an investment firm; we are operators at our core. We partner with promising businesses, infusing them with capital, cutting-edge technology, and a century of combined operational experience to foster sustainable growth and protect legacies.
-            </p>
-            <p className="text-muted-foreground">
-              Our people-first approach ensures that we honor the foundations you've built while navigating the path to future success together.
-            </p>
-            <Button asChild size="lg" className="mt-4">
-              <Link href="/team">
-                Learn More About Our Philosophy
-                <ArrowRight className="ml-2" />
-              </Link>
-            </Button>
+          <div className="space-y-6">
+            <div className="space-y-3">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary">Our Mission</h2>
+              <p className="text-lg text-muted-foreground">
+                RTG’s mission is to acquire and grow scalable restaurant and hospitality brands by blending human expertise with innovation. We empower operators with systems, insights, and leadership that drive profitability, consistency, and exceptional guest experiences.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary">Our Vision</h2>
+              <p className="text-lg text-muted-foreground">
+                RTG envisions a future where operational excellence and digital innovation coexist — where every brand we touch becomes smarter, stronger, and more guest-focused. Our vision is to redefine hospitality investment by uniting legacy expertise with modern intelligence to create enduring value for our partners, teams, and communities.
+              </p>
+            </div>
           </div>
           <div className="rounded-lg overflow-hidden shadow-2xl">
             {aboutImage && (
@@ -38,6 +66,29 @@ export function AboutPreview() {
               />
             )}
           </div>
+        </div>
+
+        <div className="text-center space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">Our Core Guiding Principles</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Our principles are the compass that guides every decision we make, ensuring we stay true to our mission and vision.
+            </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          {principles.map((principle) => (
+            <Card key={principle.title} className="text-center p-6">
+              <CardHeader className="flex justify-center items-center">
+                <div className="p-4 bg-primary/10 rounded-full mb-4">
+                  {principle.icon}
+                </div>
+                <CardTitle className="text-xl">{principle.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">{principle.description}</p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
