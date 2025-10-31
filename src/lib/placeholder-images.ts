@@ -7,4 +7,6 @@ export type ImagePlaceholder = {
   imageHint: string;
 };
 
-export const PlaceHolderImages: ImagePlaceholder[] = data.placeholderImages;
+// The data is already an object with a placeholderImages property.
+// No need to access data.placeholderImages
+export const PlaceHolderImages: ImagePlaceholder[] = data as any;
