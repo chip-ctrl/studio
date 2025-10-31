@@ -4,7 +4,7 @@ export function Logo({ className }: { className?: string }) {
   return (
     <svg
       className={className}
-      viewBox="0 0 150 40"
+      viewBox="0 0 120 40"
       xmlns="http://www.w3.org/2000/svg"
       aria-label="RTG Resto Tech Group Logo"
       fill="none"
@@ -13,7 +13,7 @@ export function Logo({ className }: { className?: string }) {
     >
       <text
         fontFamily="Montserrat, sans-serif"
-        fontSize="36"
+        fontSize="34"
         fontWeight="bold"
         y="30"
         fill="currentColor"
@@ -23,23 +23,31 @@ export function Logo({ className }: { className?: string }) {
       </text>
       <text
         fontFamily="Montserrat, sans-serif"
-        fontSize="36"
+        fontSize="34"
         fontWeight="bold"
-        x="25"
+        x="24"
         y="30"
         fill="hsl(var(--primary))"
       >
-        TG
+        T
+      </text>
+      <text
+        fontFamily="Montserrat, sans-serif"
+        fontSize="34"
+        fontWeight="bold"
+        x="45"
+        y="30"
+        fill="hsl(var(--primary))"
+      >
+        G
       </text>
       <path
-        d="M15 35 L75 1 L140 35"
+        d="M 12 35 L 35 15 L 100 0"
         stroke="hsl(var(--primary))"
         strokeWidth="4"
+        strokeLinecap="round"
         fill="none"
-        transform="translate(-5, -3)"
-      >
-        <animate attributeName="d" from="M15 35 L40 15 L140 15" to="M15 35 L75 1 L140 35" dur="0.5s" fill="freeze" />
-      </path>
+      />
     </svg>
   );
 }
