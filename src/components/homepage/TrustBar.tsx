@@ -9,6 +9,7 @@ const logos = [
   { name: 'Cinnaholic', src: 'https://storage.googleapis.com/project-spark-b2481-avatars/07548545-81b0-49a9-b3a6-8968988636e0.svg' },
   { name: 'Chili\'s', src: 'https://storage.googleapis.com/project-spark-b2481-avatars/22c9535e-c22f-4a37-b4d2-f673a5a76985.svg' },
   { name: 'Sbarro', src: 'https://storage.googleapis.com/project-spark-b2481-avatars/8f0d5111-1373-4553-9f20-f5979f40398f.svg' },
+  { name: 'Taco Bell', src: 'https://storage.googleapis.com/project-spark-b2481-avatars/33827456-e910-482e-9189-253a6d71b315.svg' },
 ];
 
 export function TrustBar() {
@@ -18,7 +19,7 @@ export function TrustBar() {
         <h3 className="text-center text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-8">
           A leadership team with experience from world-class brands
         </h3>
-        <div className="mx-auto grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-4 lg:mx-0 lg:max-w-none">
+        <div className="mx-auto grid max-w-lg grid-cols-3 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-5 lg:mx-0 lg:max-w-none">
           {logos.map((logo) => (
             <img
               key={logo.name}
