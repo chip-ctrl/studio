@@ -7,6 +7,7 @@ const logos = [
   { name: 'Outback Steakhouse', src: 'https://storage.googleapis.com/project-spark-b2481-avatars/65915d31-4a7b-4171-872f-5b6510344d51.svg' },
   { name: 'Inspire Brands', src: 'https://storage.googleapis.com/project-spark-b2481-avatars/4f4c9797-299f-4f24-9b16-5441a1bf9c11.svg' },
   { name: 'Cinnabon', src: 'https://storage.googleapis.com/project-spark-b2481-avatars/e55883a8-b66a-46b8-9363-5473775b4104.svg' },
+  { name: 'Cinnaholic', src: 'https://storage.googleapis.com/project-spark-b2481-avatars/9a75225c-6744-480f-bce6-3112c3f55091.svg' },
   { name: 'Chili\'s', src: 'https://storage.googleapis.com/project-spark-b2481-avatars/22c9535e-c22f-4a37-b4d2-f673a5a76985.svg' },
   { name: 'Sbarro', src: 'https://storage.googleapis.com/project-spark-b2481-avatars/8f0d5111-1373-4553-9f20-f5979f40398f.svg' },
   { name: 'Taco Bell', src: 'https://storage.googleapis.com/project-spark-b2481-avatars/33827456-e910-482e-9189-253a6d71b315.svg' },
@@ -21,7 +22,7 @@ export function TrustBar() {
         <h3 className="text-center text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-8">
           A leadership team with experience from world-class brands
         </h3>
-        <div className="mx-auto grid max-w-lg grid-cols-3 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-5 lg:mx-0 lg:max-w-none">
+        <div className="mx-auto grid max-w-lg grid-cols-3 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 lg:mx-0 lg:max-w-none">
           {logos.map((logo) => (
             <img
               key={logo.name}
