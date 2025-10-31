@@ -3,7 +3,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Badge } from '@/components/ui/badge';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import { Dialog, DialogTrigger, DialogContent } from '@/components/ui/dialog';
+import { SuccessStoryModal } from '@/components/homepage/SuccessStoryModal';
 
 const portfolioItems = [
   {
@@ -11,9 +12,9 @@ const portfolioItems = [
     title: 'Wingstop Portfolio Turnaround',
     category: 'QSR Franchise',
     stats: ['+13.4% Same-Store Sales', '50% Lower Staff Turnover', 'Top 1% in Order Accuracy'],
-    caseStudyUrl: '#success-story',
     imageUrl: 'https://cdn.worldvectorlogo.com/logos/wingstop-logo.svg',
     imageHint: 'Wingstop logo',
+    caseStudy: <SuccessStoryModal />,
   },
 ];
 
@@ -36,47 +37,50 @@ export function Portfolio() {
         >
           <CarouselContent>
             {portfolioItems.map((item) => {
-              const CardLinkWrapper = item.caseStudyUrl ? Link : 'div';
-              
               return (
                 <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/2">
-                  <div className="p-1 h-full">
-                    <CardLinkWrapper href={item.caseStudyUrl || ''} className="h-full block">
-                      <Card className="h-full flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-                        <CardHeader className="p-0">
-                          <div className="relative aspect-video bg-green-600 p-8">
-                               <Image
-                                 src={item.imageUrl}
-                                 alt={item.title}
-                                 fill
-                                 className="object-contain"
-                                 data-ai-hint={item.imageHint}
-                                />
-                             <div className="absolute top-4 right-4">
-                              <Badge variant="secondary">{item.category}</Badge>
-                            </div>
-                          </div>
-                        </CardHeader>
-                        <CardContent className="p-6 flex-grow">
-                          <CardTitle className="text-xl mb-2">{item.title}</CardTitle>
-                          <CardDescription>Key outcomes from our partnership:</CardDescription>
-                           <ul className="mt-4 space-y-2 text-sm text-foreground">
-                            {item.stats.map(stat => (
-                              <li key={stat} className="flex items-center">
-                                <ArrowUpRight className="h-4 w-4 mr-2 text-primary" />
-                                {stat}
-                              </li>
-                            ))}
-                          </ul>
-                        </CardContent>
-                        <CardFooter className="p-6 pt-0">
-                          <span className="text-sm text-accent-foreground font-semibold flex items-center">
-                            View Case Study <ArrowRight className="h-4 w-4 ml-1" />
-                          </span>
-                        </CardFooter>
-                      </Card>
-                    </CardLinkWrapper>
-                  </div>
+                   <Dialog>
+                    <DialogTrigger asChild>
+                      <div className="p-1 h-full">
+                          <Card className="h-full flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer">
+                            <CardHeader className="p-0">
+                              <div className="relative aspect-video bg-green-600 p-8">
+                                  <Image
+                                    src={item.imageUrl}
+                                    alt={item.title}
+                                    fill
+                                    className="object-contain"
+                                    data-ai-hint={item.imageHint}
+                                  />
+                                <div className="absolute top-4 right-4">
+                                  <Badge variant="secondary">{item.category}</Badge>
+                                </div>
+                              </div>
+                            </CardHeader>
+                            <CardContent className="p-6 flex-grow">
+                              <CardTitle className="text-xl mb-2">{item.title}</CardTitle>
+                              <CardDescription>Key outcomes from our partnership:</CardDescription>
+                              <ul className="mt-4 space-y-2 text-sm text-foreground">
+                                {item.stats.map(stat => (
+                                  <li key={stat} className="flex items-center">
+                                    <ArrowUpRight className="h-4 w-4 mr-2 text-primary" />
+                                    {stat}
+                                  </li>
+                                ))}
+                              </ul>
+                            </CardContent>
+                            <CardFooter className="p-6 pt-0">
+                              <span className="text-sm text-accent-foreground font-semibold flex items-center">
+                                View Case Study <ArrowRight className="h-4 w-4 ml-1" />
+                              </span>
+                            </CardFooter>
+                          </Card>
+                      </div>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+                      {item.caseStudy}
+                    </DialogContent>
+                  </Dialog>
                 </CarouselItem>
               );
             })}

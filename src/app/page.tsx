@@ -5,7 +5,6 @@ import { FranchiseSpotlight } from '@/components/homepage/FranchiseSpotlight';
 import { CtaBanner } from '@/components/homepage/CtaBanner';
 import { InquiryForm } from '@/components/homepage/InquiryForm';
 import { TeamShowcase } from '@/components/homepage/TeamShowcase';
-import { SuccessStory } from '@/components/homepage/SuccessStory';
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
       <Hero />
       <AboutPreview />
       <Portfolio />
-      <SuccessStory />
       <FranchiseSpotlight />
       <CtaBanner />
       <TeamShowcase />
