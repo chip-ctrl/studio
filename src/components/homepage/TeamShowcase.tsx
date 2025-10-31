@@ -9,13 +9,13 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 const teamMembers = [
   {
     name: 'Chip Joyner',
-    title: 'Managing Partner and Founder',
+    title: 'Managing Partner',
     bio: 'Chip is an accomplished restaurant and QSR executive with 15+ years of leadership in multi-unit operations and growth strategy. He leads the firm’s mission to acquire and elevate great hospitality brands through technology and operational excellence. A graduate of Harvard Business School\'s OPM program, Chip previously gained deep operational DNA with brands like Chick-fil-A and Starbucks, scaling portfolios exceeding $60 million in annual revenue.',
     id: 'team-member-4',
   },
   {
     name: 'Joseph H. Handy',
-    title: 'Co-Founder and Managing Director of Development',
+    title: 'Managing Director / Partner, Development & Fundraising',
     bio: 'Joe is an accomplished executive with over two decades of experience driving growth and fundraising across high-profile organizations. As Chief Development Officer, he leads strategic development, brand expansion, and partner relations, guiding the company’s growth through innovation and a deep commitment to community impact.',
     id: 'team-member-5',
   },
@@ -27,7 +27,7 @@ const teamMembers = [
   },
   {
     name: 'Michael Auzenne',
-    title: 'Chief Investment Advisor & Member Experience',
+    title: 'Senior Advisor, Governance & Strategy',
     bio: "Mike brings a powerful combination of analytical rigor, investment expertise, and brand experience to RTG Investments. With 15+ years across investment banking and global restaurant leadership, he guides RTG’s approach to identifying and elevating high-potential hospitality brands. He holds an MBA from Harvard Business School.",
     id: 'team-member-7',
   },
