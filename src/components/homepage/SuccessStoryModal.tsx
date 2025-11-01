@@ -35,7 +35,7 @@ const results = [
   {
     category: 'Operational Consistency',
     performance: 'Improved across all SMG metrics',
-    benchmark: 'GAAL led BW region by 6+ percentage points in every category',
+    benchmark: 'this Southeastern franchisee led BW region by 6+ percentage points in every category',
   },
 ];
 
@@ -122,7 +122,7 @@ export function SuccessStoryModal() {
                 <div>
                     <h3 className="text-2xl md:text-3xl font-bold mb-4">📊 The Impact</h3>
                     <p className="text-muted-foreground">
-                        Despite pandemic disruptions, this Southeastern franchisee achieved record-breaking operational improvement in less than two quarters. The turnaround validated RTG’s hands-on investment and operational excellence model, demonstrating how disciplined systems, data-driven decisions, and leadership alignment can transform underperforming assets into market-leading performers.
+                        In the face of pandemic headwinds, a multi-state Southeastern franchisee delivered record operational improvement in less than two quarters—a testament to RTG’s hands-on investment model. The outcome showcased how disciplined execution, data intelligence, and unified leadership can convert struggling assets into high-performing market leaders.
                     </p>
                 </div>
                 <Card className="bg-secondary">
