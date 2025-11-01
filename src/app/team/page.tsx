@@ -19,16 +19,13 @@ export default function TeamPage() {
         <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center">
           {teamMembers.map((member) => (
             <div key={member.id} className="text-center flex flex-col items-center">
-              <div className="relative w-40 h-52 lg:w-52 lg:h-64 overflow-hidden rounded-xl">
                 <Image
                     src={member.imageUrl}
                     alt={`Portrait of ${member.name}`}
                     fill
-                    sizes="(min-width: 1024px) 208px, 160px"
-                    className="object-cover"
-                    priority={false}
+                    sizes="(min-width: 1024px) 200px, 160px"
+                    className="rounded-xl object-cover"
                 />
-              </div>
               <div className="mt-4">
                 <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
                 <p className="text-md text-primary">{member.title}</p>
