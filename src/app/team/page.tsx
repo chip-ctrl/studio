@@ -26,7 +26,6 @@ export default function TeamPage() {
                     width={256}
                     height={256}
                     className="rounded-full object-cover shadow-lg"
-                    data-ai-hint={member.imageHint}
                 />
               </div>
               <div className="mt-4">
