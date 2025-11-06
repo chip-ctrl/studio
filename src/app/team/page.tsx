@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { teamMembers } from '@/lib/team';
 
 export default function TeamPage() {
@@ -18,14 +17,7 @@ export default function TeamPage() {
 
         <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center">
           {teamMembers.map((member) => (
-            <div key={member.id} className="text-center flex flex-col items-center">
-                <Image
-                    src={member.imageUrl}
-                    alt={`Portrait of ${member.name}`}
-                    width={200}
-                    height={200}
-                    className="rounded-xl object-cover"
-                />
+            <div key={member.id} className="text-center flex flex-col items-center p-6 border rounded-lg shadow-sm">
               <div className="mt-4">
                 <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
                 <p className="text-md text-primary">{member.title}</p>
