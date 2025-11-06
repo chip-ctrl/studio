@@ -21,13 +21,14 @@ export function TeamShowcase() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {leadershipTeam.map((member) => (
             <Card key={member.id} className="flex flex-col text-center items-center p-6">
-              <Image
-                src={member.imageUrl}
-                alt={`Portrait of ${member.name}`}
-                width={150}
-                height={150}
-                className="rounded-full object-cover aspect-square"
-              />
+              <div className="relative w-[150px] h-[150px]">
+                <Image
+                  src={member.imageUrl}
+                  alt={`Portrait of ${member.name}`}
+                  fill
+                  className="rounded-full object-cover"
+                />
+              </div>
               <CardHeader>
                 <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
               </CardHeader>
