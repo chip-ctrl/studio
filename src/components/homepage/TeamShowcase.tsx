@@ -3,11 +3,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import { teamMembers } from '@/lib/team';
 
-const blankTiles = [1, 2, 3, 4];
+const blankTiles = [1, 2, 3];
+const firstMember = teamMembers[0];
 
 export function TeamShowcase() {
   return (
@@ -20,6 +21,16 @@ export function TeamShowcase() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <Card className="flex flex-col text-center items-center p-6 justify-center">
+            <Image
+              src={firstMember.imageUrl}
+              alt={`Portrait of ${firstMember.name}`}
+              width={150}
+              height={150}
+              className="rounded-full object-cover"
+              data-ai-hint={firstMember.imageHint}
+            />
+          </Card>
           {blankTiles.map((tile) => (
             <Card key={tile} className="flex flex-col text-center items-center p-6">
               <Skeleton className="h-[150px] w-[150px] rounded-full" />
