@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { teamMembers } from '@/lib/team';
 
 const leadershipTeam = teamMembers.slice(0, 4);
@@ -20,17 +20,18 @@ export function TeamShowcase() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {leadershipTeam.map((member) => (
-            <Card key={member.id} className="flex flex-col text-center items-center p-6">
-              <div className="relative w-[150px] h-[150px]">
+            <Card key={member.id} className="text-center flex flex-col items-center p-6">
+              <div className="relative w-[150px] h-[150px] mx-auto mb-4">
                 <Image
                   src={member.imageUrl}
                   alt={`Portrait of ${member.name}`}
                   fill
+                  sizes="150px"
                   className="rounded-full object-cover"
                 />
               </div>
               <CardHeader>
-                <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
+                <CardTitle className="text-xl">{member.name}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-md text-primary">{member.title}</p>
