@@ -22,7 +22,7 @@ export function TeamShowcase() {
             <Card key={member.id} className="flex flex-col text-center items-center p-6">
               <Avatar className="h-24 w-24 mb-4">
                 <AvatarImage src={member.imageUrl} alt={member.name} />
-                <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
+                <AvatarFallback>{member.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
               </Avatar>
               <CardTitle>{member.name}</CardTitle>
               <CardDescription className="mb-4">{member.title}</CardDescription>
