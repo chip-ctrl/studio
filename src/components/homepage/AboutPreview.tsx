@@ -57,11 +57,11 @@ export function AboutPreview() {
       <div className="container space-y-16">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="space-y-6">
-            <div className="text-center md:text-left">
+            <div className="text-center">
                 <h2 className="text-3xl md:text-4xl font-bold text-primary">A leadership team with experience from world-class brands</h2>
             </div>
              <div className="py-6">
-              <div className="flex flex-wrap justify-center md:justify-start gap-x-8 gap-y-6">
+              <div className="flex flex-wrap justify-center gap-x-8 gap-y-6">
                 {brands.map((brand) => (
                   <div key={brand.name} className="relative h-10 w-28" title={brand.name}>
                     <Image
@@ -74,13 +74,13 @@ export function AboutPreview() {
                 ))}
               </div>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-3 text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-primary">Our Mission</h2>
               <p className="text-lg text-muted-foreground">
                 RTG’s mission is to acquire and grow scalable restaurant and hospitality brands by blending human expertise with innovation. We empower operators with systems, insights, and leadership that drive profitability, consistency, and exceptional guest experiences.
               </p>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-3 text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-primary">Our Vision</h2>
               <p className="text-lg text-muted-foreground">
                 RTG envisions a future where operational excellence and digital innovation coexist — where every brand we touch becomes smarter, stronger, and more guest-focused. Our vision is to redefine hospitality investment by uniting legacy expertise with modern intelligence to create enduring value for our partners, teams, and communities.

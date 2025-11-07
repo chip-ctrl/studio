@@ -30,11 +30,11 @@ export default function TeamMemberPage({ params }: { params: { memberId: string 
                   priority
                 />
               </div>
-              <h1 className="text-3xl font-bold text-primary mt-4">{member.name}</h1>
+              <h1 className="text-3xl font-bold text-primary mt-4 text-center">{member.name}</h1>
               <p className="text-lg text-muted-foreground mt-1">{member.title}</p>
             </div>
             <div className="md:col-span-2 p-8">
-              <h2 className="text-2xl font-bold text-primary mb-4">Biography</h2>
+              <h2 className="text-2xl font-bold text-primary mb-4 text-center">Biography</h2>
               <div className="space-y-4 text-foreground/80 prose prose-lg max-w-none">
                 {bioParagraphs.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>

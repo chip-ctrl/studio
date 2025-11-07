@@ -24,7 +24,7 @@ export function FranchiseSpotlight() {
               data-ai-hint={franchiseImage.imageHint}
             />
           </div>
-          <div className="space-y-4">
+          <div className="space-y-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold">Grow With a Proven Model</h2>
             <p className="text-lg text-muted-foreground">
               Leverage our operational expertise and powerful brand recognition. RTG Resto Tech Group offers franchise opportunities for driven entrepreneurs ready to build a successful business on a solid foundation.

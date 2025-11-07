@@ -13,7 +13,7 @@ export function InvestmentOverview() {
     return (
         <section className="py-16 md:py-24 bg-background">
             <div className="container grid md:grid-cols-2 gap-12 items-start">
-                <div className="space-y-8">
+                <div className="space-y-8 text-center">
                     <div>
                         <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Investment Overview</h2>
                         <h3 className="text-2xl font-semibold mb-2">Investment Thesis</h3>
@@ -34,7 +34,7 @@ export function InvestmentOverview() {
                     </div>
                 </div>
                 <Card className="bg-secondary">
-                    <CardHeader>
+                    <CardHeader className="text-center">
                         <CardTitle>Fund Structure & Capital Strategy</CardTitle>
                         <CardDescription>Designed for Limited Partners seeking exposure to hospitality growth with professional management and aligned incentives.</CardDescription>
                     </CardHeader>

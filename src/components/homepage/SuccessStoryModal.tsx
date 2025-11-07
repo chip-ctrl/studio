@@ -119,7 +119,7 @@ export function SuccessStoryModal() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
+                <div className="text-center">
                     <h3 className="text-2xl md:text-3xl font-bold mb-4">📊 The Impact</h3>
                     <p className="text-muted-foreground">
                         In the face of pandemic headwinds, a multi-state Southeastern franchisee delivered record operational improvement in less than two quarters—a testament to RTG’s hands-on investment model. The outcome showcased how disciplined execution, data intelligence, and unified leadership can convert struggling assets into high-performing market leaders.
