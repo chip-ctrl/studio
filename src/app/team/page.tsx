@@ -2,6 +2,8 @@
 
 import { teamMembers } from '@/lib/team';
 import Image from 'next/image';
+import Link from 'next/link';
+import { Card, CardContent } from '@/components/ui/card';
 
 export default function TeamPage() {
   return (
@@ -18,21 +20,23 @@ export default function TeamPage() {
 
         <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center">
           {teamMembers.map((member) => (
-            <div key={member.id} className="text-center flex flex-col items-center p-6 border rounded-lg shadow-sm">
-               <div className="relative w-36 h-36 mb-4">
-                <Image
-                  src={member.imageUrl}
-                  alt={`Portrait of ${member.name}`}
-                  fill
-                  sizes="144px"
-                  className="rounded-full object-cover"
-                />
-              </div>
-              <div className="mt-4">
-                <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
-                <p className="text-md text-primary">{member.title}</p>
-              </div>
-            </div>
+             <Link href={`/team/${member.id}`} key={member.id} className="group">
+              <Card className="text-center flex flex-col items-center p-6 border shadow-sm h-full transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-1">
+                <div className="relative w-36 h-36 mb-4">
+                  <Image
+                    src={member.imageUrl}
+                    alt={`Portrait of ${member.name}`}
+                    fill
+                    sizes="144px"
+                    className="rounded-full object-cover"
+                  />
+                </div>
+                <CardContent className="mt-4">
+                  <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
+                  <p className="text-md text-primary">{member.title}</p>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>
