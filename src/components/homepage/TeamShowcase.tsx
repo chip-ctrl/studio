@@ -30,7 +30,7 @@ export function TeamShowcase() {
                 <div className="relative w-[150px] h-[150px] mx-auto mb-4">
                   <Image
                     src={member.imageUrl}
-                    alt={`Portrait of ${member.name}`}
+                    alt={member.name}
                     fill
                     sizes="150px"
                     className="rounded-full object-cover"

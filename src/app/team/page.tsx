@@ -25,7 +25,7 @@ export default function TeamPage() {
                 <div className="relative w-36 h-36 mb-4">
                   <Image
                     src={member.imageUrl}
-                    alt={`Portrait of ${member.name}`}
+                    alt={member.name}
                     fill
                     sizes="144px"
                     className="rounded-full object-cover"

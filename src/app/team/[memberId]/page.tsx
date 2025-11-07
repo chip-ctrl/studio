@@ -23,7 +23,7 @@ export default function TeamMemberPage({ params }: { params: { memberId: string 
               <div className="relative w-48 h-48 mb-4">
                 <Image
                   src={member.imageUrl}
-                  alt={`Portrait of ${member.name}`}
+                  alt={member.name}
                   fill
                   sizes="192px"
                   className="rounded-full object-cover"
