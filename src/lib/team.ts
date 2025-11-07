@@ -13,7 +13,7 @@ export const teamMembers = [
         name: 'Joseph H. Handy',
         title: 'Managing Director / Partner, Development & Fundraising',
         bio: "Joe is an accomplished executive with over two decades of experience driving growth and fundraising across high-profile organizations. As Chief Development Officer, he leads strategic development, brand expansion, and partner relations, guiding the company's growth through innovation and a deep commitment to community impact. He holds an Executive MBA from Kennesaw State University and is a graduate of the College of New Rochelle.",
-        imageUrl: 'https://storage.googleapis.com/project-spark-b2481-avatars/1c9f2b3e-7a42-452f-903e-71b315c12852.jpeg',
+        imageUrl: 'https://storage.googleapis.com/project-spark-b2481-avatars/007323b7-70e0-47b2-859a-18b4561005f2.jpeg',
         imageHint: 'man professional'
     },
     {
@@ -21,7 +21,7 @@ export const teamMembers = [
         name: 'Derrick Johnson',
         title: 'Chief Technology & Operations Director',
         bio: 'Derrick drives the integration of advanced technology and scalable systems across RTG’s portfolio. With 15+ years in franchise operations for brands like Cinnaholic and Levy Restaurants, he specializes in operational optimization and leveraging data to enhance efficiency and customer experience. He is a graduate of The University of Tennessee at Chattanooga.',
-        imageUrl: 'https://storage.googleapis.com/project-spark-b2481-avatars/0ce4f66a-195f-491b-857e-399a039773b0.png',
+        imageUrl: 'https://storage.googleapis.com/project-spark-b2481-avatars/f448e89f-8181-4228-875f-4089304199f1.png',
         imageHint: 'man professional'
     },
     {
