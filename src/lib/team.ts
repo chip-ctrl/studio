@@ -20,7 +20,7 @@ export const teamMembers = [
         id: 'team-member-6',
         name: 'Derrick Johnson',
         title: 'Chief Technology & Operations Director',
-        bio: 'Derrick drives the integration of advanced technology and scalable systems across RTG’s portfolio. With 15+ years in franchise operations for brands like Cinnaholic and Levy Restaurants, he specializes in operational optimization and leveraging data to enhance efficiency and customer experience. He is a graduate of The University of Tennessee at Chattanooga.',
+        bio: 'Derrick Johnson is an operations and franchise executive with 15+ years of experience leading multi-unit restaurant management, brand performance, and technology integration. He directs RTG’s operational systems, analytics, and technology deployment across portfolio brands.\n\nHe formerly served as Vice President of Franchise Operations for Cinnaholic Franchise Group, where he led performance optimization across the U.S. and Canada, implementing KPI frameworks and operational best practices. Derrick also held senior roles with Levy Restaurants, Sky Zone Franchise Group, Tropical Smoothie Café, and Focus Brands, overseeing large-scale, multi-unit operations generating more than $30 million annually.\n\nEducation: B.A., Business Administration, Saint Leo University',
         imageUrl: 'https://storage.googleapis.com/project-spark-b2481-avatars/f448e89f-8181-4228-875f-4089304199f1.png',
         imageHint: 'man professional'
     },
