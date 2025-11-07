@@ -37,9 +37,9 @@ const brands = [
   { name: 'Starbucks', logoUrl: 'https://cdn.worldvectorlogo.com/logos/starbucks.svg' },
   { name: 'Inspire Brands', logoUrl: 'https://cdn.worldvectorlogo.com/logos/inspire-brands.svg' },
   { name: 'Wingstop', logoUrl: 'https://cdn.worldvectorlogo.com/logos/wingstop-logo.svg' },
+  { name: 'Burger King', logoUrl: 'https://cdn.worldvectorlogo.com/logos/burger-king-2020.svg' },
   { name: 'Boston Consulting Group', logoUrl: 'https://cdn.worldvectorlogo.com/logos/boston-consulting-group.svg' },
   { name: 'Bank of America', logoUrl: 'https://cdn.worldvectorlogo.com/logos/bank-of-america-2.svg' },
-  { name: 'Burger King', logoUrl: 'https://cdn.worldvectorlogo.com/logos/burger-king-2020.svg' },
 ];
 
 
