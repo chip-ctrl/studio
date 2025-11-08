@@ -37,46 +37,48 @@ export function TeamShowcase() {
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {showcasedMembers.map((member) => {
             const memberImage = images[member.imageId as keyof typeof images];
             const bioSnippet = member.bio.split('\n\n')[0].substring(0, 150) + '...';
 
             return (
-              <AccordionItem value={member.id} key={member.id} asChild>
-                 <Card className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl">
-                    <AccordionTrigger className="text-xl font-bold text-primary p-6 text-center hover:no-underline flex flex-col items-center data-[state=open]:border-b">
-                        <div className="w-full">
-                            <h3 className="text-xl font-bold text-primary">{member.name}</h3>
-                            <p className="text-sm text-muted-foreground mt-1">{member.title}</p>
-                        </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="p-6 pt-4 text-center">
-                        {memberImage && (
-                          <div className="mb-4 flex justify-center">
-                              <Image
-                              src={memberImage.imageUrl}
-                              alt={`Portrait of ${member.name}`}
-                              width={120}
-                              height={120}
-                              className="object-cover rounded-full"
-                              />
+              <Card key={member.id} className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl">
+                 <Accordion type="single" collapsible className="w-full">
+                   <AccordionItem value={member.id} className="border-b-0">
+                      <AccordionTrigger className="text-xl font-bold text-primary p-6 text-center hover:no-underline flex flex-col items-center data-[state=open]:border-b">
+                          <div className="w-full">
+                              <h3 className="text-xl font-bold text-primary">{member.name}</h3>
+                              <p className="text-sm text-muted-foreground mt-1">{member.title}</p>
                           </div>
-                        )}
-                        <p className="text-sm text-muted-foreground mb-4 text-left">
-                            {bioSnippet}
-                        </p>
-                        <Button asChild size="sm" variant="link" className="mt-auto">
-                            <Link href={`/team/${member.id}`}>
-                                View Full Bio <ArrowRight className="ml-2" />
-                            </Link>
-                        </Button>
-                    </AccordionContent>
-                </Card>
-              </AccordionItem>
+                      </AccordionTrigger>
+                      <AccordionContent className="p-6 pt-0 text-center">
+                        <div className="flex flex-col items-center gap-4">
+                          {memberImage && (
+                              <Image
+                                src={memberImage.imageUrl}
+                                alt={`Portrait of ${member.name}`}
+                                width={120}
+                                height={120}
+                                className="object-cover rounded-full"
+                              />
+                          )}
+                          <p className="text-sm text-muted-foreground text-left">
+                              {bioSnippet}
+                          </p>
+                          <Button asChild size="sm" variant="link" className="mt-auto">
+                              <Link href={`/team/${member.id}`}>
+                                  View Full Bio <ArrowRight className="ml-2" />
+                              </Link>
+                          </Button>
+                        </div>
+                      </AccordionContent>
+                  </AccordionItem>
+                 </Accordion>
+              </Card>
             );
           })}
-        </Accordion>
+        </div>
         
         <div className="text-center mt-12">
           <Button asChild size="lg">
