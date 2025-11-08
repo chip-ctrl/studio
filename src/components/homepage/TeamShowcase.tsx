@@ -3,11 +3,8 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-import Image from 'next/image';
-import imageData from '@/lib/placeholder-images.json';
 
 export function TeamShowcase() {
-  const teamImage = (imageData as any)['team-showcase'];
 
   return (
     <section id="team" className="py-16 md:py-24 bg-secondary">
@@ -19,21 +16,6 @@ export function TeamShowcase() {
           </p>
         </div>
         
-        {teamImage && (
-          <div className="mb-12 flex justify-center">
-            <div className="relative rounded-lg overflow-hidden shadow-2xl">
-              <Image
-                src={teamImage.imageUrl}
-                alt={teamImage.description}
-                width={teamImage.width}
-                height={teamImage.height}
-                className="object-cover"
-                data-ai-hint={teamImage.imageHint}
-              />
-            </div>
-          </div>
-        )}
-
         <div className="text-center">
           <Button asChild size="lg">
             <Link href="/team">
