@@ -15,9 +15,9 @@ export function TeamShowcase() {
           </p>
         </div>
 
-        <div className="relative w-full max-w-4xl mx-auto aspect-[4/2] rounded-lg overflow-hidden shadow-2xl mb-12">
+        <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-lg overflow-hidden shadow-2xl mb-12">
           <Image
-            src="https://storage.googleapis.com/project-spark-b2481-avatars/chip-joyner-new.jpeg"
+            src="https://picsum.photos/seed/team-photo/1200/600"
             alt="Leadership team collage"
             fill
             className="object-cover"
