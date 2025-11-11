@@ -75,10 +75,6 @@ const brands = [
     name: 'Boston Consulting Group',
     logoUrl: 'https://cdn.worldvectorlogo.com/logos/boston-consulting-group.svg',
   },
-  {
-    name: 'Barcelona Wine Bar',
-    logoUrl: 'https://images.squarespace-cdn.com/content/v1/5b8592541aef1d54449832a5/1548888062363-33Y1A2356A542G3A4VA8/barcelonawinebar_primary-logo_black.png',
-  },
 ];
 
 export default function AboutPreview() {
