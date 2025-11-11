@@ -50,6 +50,7 @@ const brands = [
   { name: 'Chow Baby', logoUrl: 'https://storage.googleapis.com/stedi-assets/chow-baby-logo.png' },
   { name: 'Waffle House', logoUrl: 'https://cdn.worldvectorlogo.com/logos/waffle-house.svg' },
   { name: 'Sky Zone', logoUrl: 'https://cdn.worldvectorlogo.com/logos/sky-zone-logo.svg' },
+  { name: 'Feed the Soul Foundation', logoUrl: 'https://storage.googleapis.com/stedi-assets/feed-the-soul-foundation-logo.png' },
 ];
 
 
