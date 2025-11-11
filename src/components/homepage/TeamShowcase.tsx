@@ -6,8 +6,13 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Plus, Minus } from 'lucide-react';
 import { teamMembers } from '@/lib/team';
 import imageData from '@/lib/placeholder-images.json';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible"
 
 type ImageData = {
   [key: string]: {
@@ -22,11 +27,6 @@ type ImageData = {
 export function TeamShowcase() {
   const images = imageData as ImageData;
   const showcasedMembers = teamMembers.slice(0, 4);
-  const [expandedMember, setExpandedMember] = useState<string | null>(null);
-
-  const handleToggle = (memberId: string) => {
-    setExpandedMember(expandedMember === memberId ? null : memberId);
-  };
 
   return (
     <section id="team" className="py-16 md:py-24 bg-secondary">
@@ -42,52 +42,53 @@ export function TeamShowcase() {
           {showcasedMembers.map((member) => {
             const memberImage = images[member.imageId as keyof typeof images];
             const bioSnippet = member.bio.split('\n\n')[0].substring(0, 150) + '...';
-            const isExpanded = expandedMember === member.id;
 
             return (
-              <Card key={member.id} className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl">
-                <div
-                  className="p-6 cursor-pointer"
-                  onClick={() => handleToggle(member.id)}
-                >
-                  <div className="flex justify-between items-center">
-                    <div className="w-full">
-                      <h3 className="text-xl font-bold text-primary">{member.name}</h3>
-                      <p className="text-sm text-muted-foreground mt-1">{member.title}</p>
-                    </div>
-                    {isExpanded ? <Minus className="h-5 w-5" /> : <Plus className="h-5 w-5" />}
-                  </div>
-                </div>
-                
-                <div className={cn(
-                  'transition-all duration-500 ease-in-out overflow-hidden',
-                  isExpanded ? 'max-h-96' : 'max-h-0'
-                )}>
-                  <div className="px-6 pb-6 pt-0 text-center">
-                    <div className="flex flex-col items-center gap-4">
-                      {memberImage && (
-                        <div className="relative">
-                          <Image
-                            src={memberImage.imageUrl}
-                            alt={`Portrait of ${member.name}`}
-                            width={120}
-                            height={120}
-                            className="object-cover rounded-full"
-                          />
+              <Collapsible key={member.id} asChild>
+                <Card className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl">
+                  <CollapsibleTrigger asChild>
+                      <div
+                        className="p-6 cursor-pointer"
+                      >
+                        <div className="flex justify-between items-center">
+                          <div className="w-full">
+                            <h3 className="text-xl font-bold text-primary">{member.name}</h3>
+                            <p className="text-sm text-muted-foreground mt-1">{member.title}</p>
+                          </div>
+                          {/* The trigger itself will handle open/closed state, so we can use a placeholder or style based on state */}
+                          <div className="group-data-[state=open]:hidden"><Plus className="h-5 w-5" /></div>
+                          <div className="group-data-[state=closed]:hidden"><Minus className="h-5 w-5" /></div>
                         </div>
-                      )}
-                      <p className="text-sm text-muted-foreground text-left">
-                        {bioSnippet}
-                      </p>
-                      <Button asChild size="sm" variant="link" className="mt-auto">
-                        <Link href={`/team/${member.id}`}>
-                          View Full Bio <ArrowRight className="ml-2" />
-                        </Link>
-                      </Button>
+                      </div>
+                  </CollapsibleTrigger>
+                  
+                  <CollapsibleContent className="transition-all duration-500 ease-in-out overflow-hidden data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
+                    <div className="px-6 pb-6 pt-0 text-center">
+                      <div className="flex flex-col items-center gap-4">
+                        {memberImage && (
+                          <div className="relative">
+                            <Image
+                              src={memberImage.imageUrl}
+                              alt={`Portrait of ${member.name}`}
+                              width={120}
+                              height={120}
+                              className="object-cover rounded-full"
+                            />
+                          </div>
+                        )}
+                        <p className="text-sm text-muted-foreground text-left">
+                          {bioSnippet}
+                        </p>
+                        <Button asChild size="sm" variant="link" className="mt-auto">
+                          <Link href={`/team/${member.id}`}>
+                            View Full Bio <ArrowRight className="ml-2" />
+                          </Link>
+                        </Button>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </Card>
+                  </CollapsibleContent>
+                </Card>
+              </Collapsible>
             );
           })}
         </div>
