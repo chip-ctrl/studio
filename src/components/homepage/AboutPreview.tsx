@@ -36,10 +36,6 @@ const brands = [
     logoUrl: 'https://cdn.worldvectorlogo.com/logos/chilis-1.svg',
   },
   {
-    name: 'Sbarro',
-    logoUrl: 'https://cdn.worldvectorlogo.com/logos/sbarro-1.svg',
-  },
-  {
     name: 'Cinnabon',
     logoUrl: 'https://cdn.worldvectorlogo.com/logos/cinnabon-3.svg',
   },
