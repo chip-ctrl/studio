@@ -41,6 +41,7 @@ const brands = [
   { name: 'US Foods', logoUrl: 'https://cdn.worldvectorlogo.com/logos/us-foods-1.svg' },
   { name: 'Sodexo', logoUrl: 'https://cdn.worldvectorlogo.com/logos/sodexo-2.svg' },
   { name: 'HMSHost', logoUrl: 'https://cdn.worldvectorlogo.com/logos/hms-host.svg' },
+  { name: 'Cinnabon', logoUrl: 'https://cdn.worldvectorlogo.com/logos/cinnabon-2.svg' },
   { name: 'Boston Consulting Group', logoUrl: 'https://cdn.worldvectorlogo.com/logos/boston-consulting-group.svg' },
   { name: 'Bank of America', logoUrl: 'https://cdn.worldvectorlogo.com/logos/bank-of-america-2.svg' },
 ];
