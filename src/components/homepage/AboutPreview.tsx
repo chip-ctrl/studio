@@ -27,6 +27,14 @@ const brands = [
     name: 'Pei Wei',
     logoUrl: 'https://cdn.worldvectorlogo.com/logos/pei-wei-asian-diner.svg',
   },
+  {
+    name: 'Burger King',
+    logoUrl: 'https://cdn.worldvectorlogo.com/logos/burger-king-4.svg',
+  },
+  {
+    name: 'Red Robin',
+    logoUrl: 'https://cdn.worldvectorlogo.com/logos/red-robin-gourmet-burgers-1.svg',
+  },
 ];
 
 export default function AboutPreview() {
@@ -50,7 +58,7 @@ export default function AboutPreview() {
           </div>
           <div className="space-y-8">
             <h3 className="text-2xl font-bold text-center text-primary">A Legacy of Leadership with World-Class Brands</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
               {brands.map((brand) => (
                 <div key={brand.name} className="flex justify-center items-center p-4 bg-background rounded-lg shadow-sm">
                   <div className="relative h-16 w-32">
