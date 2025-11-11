@@ -47,6 +47,22 @@ const brands = [
     name: 'Cinnaholic',
     logoUrl: 'https://cdn.worldvectorlogo.com/logos/cinnaholic-1.svg',
   },
+  {
+    name: 'Sodexo',
+    logoUrl: 'https://cdn.worldvectorlogo.com/logos/sodexo-2.svg',
+  },
+  {
+    name: 'US Foods',
+    logoUrl: 'https://cdn.worldvectorlogo.com/logos/us-foods-1.svg',
+  },
+  {
+    name: 'Levy',
+    logoUrl: 'https://cdn.worldvectorlogo.com/logos/levy-restaurants.svg',
+  },
+  {
+    name: 'Wells Fargo',
+    logoUrl: 'https://cdn.worldvectorlogo.com/logos/wells-fargo-1.svg',
+  },
 ];
 
 export default function AboutPreview() {
