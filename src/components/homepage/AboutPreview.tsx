@@ -20,8 +20,8 @@ const brands = [
     logoUrl: 'https://cdn.worldvectorlogo.com/logos/taco-bell-5.svg',
   },
   {
-    name: 'Outback Steakhouse',
-    logoUrl: 'https://cdn.worldvectorlogo.com/logos/outback-steakhouse-2.svg',
+    name: 'HMSHost',
+    logoUrl: 'https://cdn.worldvectorlogo.com/logos/hmshost.svg',
   },
   {
     name: 'Burger King',
