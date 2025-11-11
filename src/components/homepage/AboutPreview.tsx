@@ -24,8 +24,8 @@ const brands = [
     logoUrl: 'https://cdn.worldvectorlogo.com/logos/outback-steakhouse-2.svg',
   },
   {
-    name: 'Chow Baby',
-    logoUrl: 'https://images.squarespace-cdn.com/content/v1/59ec92569f8dceb543598d89/1510234782019-231924J5Y5H02336O5E9/chow-baby-logo-stacked.png',
+    name: 'Pei Wei',
+    logoUrl: 'https://cdn.worldvectorlogo.com/logos/pei-wei-asian-diner.svg',
   },
   {
     name: 'Burger King',
