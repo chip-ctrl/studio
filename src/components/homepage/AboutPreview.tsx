@@ -24,10 +24,6 @@ const brands = [
     logoUrl: 'https://cdn.worldvectorlogo.com/logos/outback-steakhouse-2.svg',
   },
   {
-    name: 'Pei Wei',
-    logoUrl: 'https://cdn.worldvectorlogo.com/logos/pei-wei-asian-diner.svg',
-  },
-  {
     name: 'Burger King',
     logoUrl: 'https://cdn.worldvectorlogo.com/logos/burger-king-4.svg',
   },
