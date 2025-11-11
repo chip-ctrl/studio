@@ -53,7 +53,7 @@ export const teamMembers = [
         id: 'jenn-allstun',
         name: 'Jenn Allstun',
         title: 'Senior Advisor, Store Design',
-        bio: "Jenn Allstun is an accomplished professional with extensive experience in store design. As Senior Advisor, she brings a wealth of knowledge to create inviting and functional spaces that enhance the customer experience and reinforce brand identity. Her expertise ensures that every location is designed for operational efficiency and aesthetic appeal.",
+        bio: "Jenn Allstun is a seasoned restaurant design executive with over 25 years of experience leading brand-defining initiatives for global and national hospitality brands. Known for blending operational excellence with compelling guest experiences, she has shaped design programs for Starbucks, Smashburger, Red Robin, Old Chicago, and Rock Bottom across domestic and international markets.\n\nAs Senior Advisor, Store Design, Jenn brings deep expertise in creating innovative, scalable restaurant environments that strengthen brand identity and enhance performance. Her leadership reflects a proven ability to translate business objectives into distinctive, enduring spaces that connect with guests and teams alike.\n\nJenn holds degrees from Arizona State University and The Art Institute in Interior Design.",
         imageId: 'jenn-allstun'
     }
 ];
