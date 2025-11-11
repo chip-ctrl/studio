@@ -58,6 +58,7 @@ const brands = [
   { name: 'Au Bon Pain', logoUrl: 'https://cdn.worldvectorlogo.com/logos/au-bon-pain.svg' },
 ];
 
+
 export function AboutPreview() {
   const aboutImage = {
     imageUrl: 'https://images.unsplash.com/photo-1688380692117-63178554d76d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzYxODM4MzI1fDA&ixlib=rb-4.1.0&q=80&w=1080',
