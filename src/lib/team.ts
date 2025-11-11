@@ -48,5 +48,12 @@ export const teamMembers = [
         title: 'Senior Advisor, Brand and Culinary Partnerships',
         bio: 'Sean Palani is a hospitality and brand strategy executive with over 20 years of experience spanning restaurant operations, culinary innovation, and strategic partnerships. He serves as Senior Advisor to RTG Investments, guiding portfolio brands in culinary development, brand positioning, and strategic alliance building.\n\nAs Founder of The Pineapple Project – A Southern Hospitality, LLC, Sean has advised restaurants and hotels nationwide on financial performance, team training, menu design, and guest experience optimization. Previously, he served as Director of Partnerships and Outreach for Giving Kitchen, where he helped raise over $3 million in fundraising revenue and onboarded more than 100 food and beverage partners. His earlier career includes leadership roles at US Foods, Sodexo, and Barteca Restaurant Group.\n\nEducation: B.A., International Management & Communication, Fairfield University; A.O.S., Culinary Arts & Management, Le Cordon Bleu\nAffiliations: Award Recipient, Lean On Me (2020), You Matter (2021), and Matt Fishbein Employee of the Year (2022); Advisor to emerging restaurant brands across the Southeast.',
         imageId: 'sean-palani'
+    },
+    {
+        id: 'jenn-allstun',
+        name: 'Jenn Allstun',
+        title: 'Senior Advisor Store Design',
+        bio: "Jenn Allstun is an accomplished professional with extensive experience in store design. As Senior Advisor, she brings a wealth of knowledge to create inviting and functional spaces that enhance the customer experience and reinforce brand identity. Her expertise ensures that every location is designed for operational efficiency and aesthetic appeal.",
+        imageId: 'jenn-allstun'
     }
 ];
