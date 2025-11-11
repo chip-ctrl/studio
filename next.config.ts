@@ -10,6 +10,7 @@ const nextConfig = {
       { protocol: 'https', hostname: 'cdn.worldvectorlogo.com' },
       { protocol: 'https', hostname: 'picsum.photos' },
       { protocol: 'https', hostname: 'images.squarespace-cdn.com' },
+      { protocol: 'https', hostname: 'upload.wikimedia.org' },
     ],
   },
 };
