@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -48,6 +49,7 @@ const brands = [
   { name: 'Bank of America', logoUrl: 'https://cdn.worldvectorlogo.com/logos/bank-of-america-2.svg' },
   { name: 'Chow Baby', logoUrl: 'https://storage.googleapis.com/stedi-assets/chow-baby-logo.png' },
   { name: 'Waffle House', logoUrl: 'https://cdn.worldvectorlogo.com/logos/waffle-house.svg' },
+  { name: 'Sky Zone', logoUrl: 'https://cdn.worldvectorlogo.com/logos/sky-zone-logo.svg' },
 ];
 
 
@@ -124,7 +126,7 @@ export function AboutPreview() {
               <CardContent>
                 <p className="text-muted-foreground">{principle.description}</p>
               </CardContent>
-            </Card>
+            </card>
           ))}
         </div>
       </div>
