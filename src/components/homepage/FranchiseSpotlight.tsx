@@ -5,9 +5,9 @@ import { ArrowRight } from 'lucide-react';
 
 export function FranchiseSpotlight() {
   const franchiseImage = {
-    imageUrl: 'https://images.unsplash.com/photo-1542581482-851c38ee4b94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzdG9yZSUyMGZyb250fGVufDB8fHx8MTc2MTgxODIwNXww&ixlib=rb-4.1.0&q=80&w=1080',
-    description: 'Image for the franchise spotlight section, showing a successful franchise storefront.',
-    imageHint: 'store front'
+    imageUrl: 'https://storage.googleapis.com/project-spark-b2481-local-dev-assets/0e93a02c-4b6a-49a2-9a99-49330836c2f5.png',
+    description: 'A bustling restaurant interior with patrons dining.',
+    imageHint: 'restaurant interior'
   };
 
   return (
