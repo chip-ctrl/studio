@@ -39,23 +39,21 @@ export function TeamShowcase() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {showcasedMembers.map((member) => {
             const memberImage = images[member.imageId as keyof typeof images];
-            const bioSnippet = member.bio.split('\n\n')[0].substring(0, 150) + '...';
+            const bioSnippet = member.bio ? member.bio.split('\n\n')[0].substring(0, 150) + '...' : '';
 
             return (
               <Collapsible key={member.id} asChild>
                 <Card className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl">
                     <div className="p-6">
-                      <CollapsibleTrigger className="w-full text-left group">
-                        <div className="flex justify-between items-center">
-                            <div>
-                              <h3 className="text-xl font-bold text-primary">{member.name}</h3>
-                              <p className="text-sm text-muted-foreground mt-1">{member.title}</p>
-                            </div>
-                            <div className="flex-shrink-0">
-                              <Plus className="h-5 w-5 group-data-[state=open]:hidden" />
-                              <Minus className="h-5 w-5 group-data-[state=closed]:hidden" />
-                            </div>
-                        </div>
+                      <CollapsibleTrigger className="w-full text-left group flex justify-between items-center">
+                          <div>
+                            <h3 className="text-xl font-bold text-primary">{member.name}</h3>
+                            <p className="text-sm text-muted-foreground mt-1">{member.title}</p>
+                          </div>
+                          <div className="flex-shrink-0">
+                            <Plus className="h-5 w-5 block group-data-[state=open]:hidden" />
+                            <Minus className="h-5 w-5 hidden group-data-[state=open]:block" />
+                          </div>
                       </CollapsibleTrigger>
                     </div>
                   
@@ -70,6 +68,7 @@ export function TeamShowcase() {
                               width={120}
                               height={120}
                               className="object-cover rounded-full"
+                              unoptimized
                             />
                           </div>
                         )}

@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'standalone', // Required for modern Firebase/Google Cloud deploys
   images: {
     remotePatterns: [
       {
