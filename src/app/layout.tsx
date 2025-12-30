@@ -8,6 +8,9 @@ import { Montserrat, Lora } from 'next/font/google';
 export const metadata: Metadata = {
   title: 'RTG Resto Tech Group',
   description: 'A Delaware Company',
+  verification: {
+    google: 'qdOknv3jFE-MZPYqXRXniQ-UiH-Yi4kbij2Ki2MgatE',
+  },
 };
 
 const montserrat = Montserrat({
