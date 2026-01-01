@@ -1,65 +1,65 @@
 {
   "team-showcase": {
-    "imageUrl": "https://storage.googleapis.com/project-spark-b2481-avatars/a08404a1-871d-400a-97d5-d86f91f7401c.png",
+    "imageUrl": "https://ui-avatars.com/api/?name=Team&background=0D47A1&color=fff&size=256",
     "description": "A portrait of a leader from the company.",
     "imageHint": "professional man",
-    "width": 1200,
-    "height": 675
+    "width": 256,
+    "height": 256
   },
   "chip-joyner": {
-    "imageUrl": "https://storage.googleapis.com/project-spark-b2481-avatars/417f7a81-01f1-4354-8e54-52a8a737f1e6.png",
+    "imageUrl": "https://ui-avatars.com/api/?name=Chip+Joyner&background=1565C0&color=fff&size=256",
     "description": "Portrait of Chip Joyner",
     "imageHint": "man professional",
-    "width": 1974,
-    "height": 1974
+    "width": 256,
+    "height": 256
   },
   "joseph-handy": {
-    "imageUrl": "https://storage.googleapis.com/project-spark-b2481-avatars/98b25f32-72c8-4b71-b586-774f38db2926.png",
+    "imageUrl": "https://ui-avatars.com/api/?name=Joseph+Handy&background=1976D2&color=fff&size=256",
     "description": "Portrait of Joseph H. Handy",
     "imageHint": "man professional",
-    "width": 2070,
-    "height": 2070
+    "width": 256,
+    "height": 256
   },
   "derrick-johnson": {
-    "imageUrl": "https://storage.googleapis.com/project-spark-b2481-avatars/6e637628-98e6-4279-813c-13636839ea0c.png",
+    "imageUrl": "https://ui-avatars.com/api/?name=Derrick+Johnson&background=1E88E5&color=fff&size=256",
     "description": "Portrait of Derrick Johnson",
     "imageHint": "man professional",
-    "width": 1974,
-    "height": 1974
+    "width": 256,
+    "height": 256
   },
   "darryl-lesure": {
-    "imageUrl": "https://storage.googleapis.com/project-spark-b2481-avatars/1b9134a9-7c15-416a-9e19-0f6990425a7f.png",
+    "imageUrl": "https://ui-avatars.com/api/?name=Darryl+Lesure&background=2196F3&color=fff&size=256",
     "description": "Portrait of Darryl Lesure",
     "imageHint": "man professional",
-    "width": 1921,
-    "height": 1921
+    "width": 256,
+    "height": 256
   },
   "michael-auzenne": {
-    "imageUrl": "https://storage.googleapis.com/project-spark-b2481-avatars/d162f1a9-3b68-45e0-9286-f72529367469.png",
+    "imageUrl": "https://ui-avatars.com/api/?name=Michael+Auzenne&background=42A5F5&color=fff&size=256",
     "description": "Portrait of Michael Auzenne",
     "imageHint": "man professional",
-    "width": 1974,
-    "height": 1974
+    "width": 256,
+    "height": 256
   },
   "maurice-watson": {
-    "imageUrl": "https://storage.googleapis.com/project-spark-b2481-avatars/8853b05a-5f50-4824-9b55-d146200234a9.png",
+    "imageUrl": "https://ui-avatars.com/api/?name=Maurice+Watson&background=64B5F6&color=fff&size=256",
     "description": "Portrait of Maurice Watson",
     "imageHint": "man professional",
-    "width": 1974,
-    "height": 1974
+    "width": 256,
+    "height": 256
   },
   "sean-palani": {
-    "imageUrl": "https://storage.googleapis.com/project-spark-b2481-avatars/9a9e338c-8a9d-4f0e-943a-7a54a24f5643.png",
+    "imageUrl": "https://ui-avatars.com/api/?name=Sean+Palani&background=0D47A1&color=fff&size=256",
     "description": "Portrait of Sean Palani",
     "imageHint": "man professional",
-    "width": 1974,
-    "height": 1974
+    "width": 256,
+    "height": 256
   },
   "jenn-allstun": {
-    "imageUrl": "https://storage.googleapis.com/project-spark-b2481-avatars/b3036573-02f5-4422-965d-16f333333342.png",
+    "imageUrl": "https://ui-avatars.com/api/?name=Jenn+Allstun&background=1565C0&color=fff&size=256",
     "description": "Portrait of Jenn Allstun",
     "imageHint": "woman professional",
-    "width": 1974,
-    "height": 1974
+    "width": 256,
+    "height": 256
   }
 }

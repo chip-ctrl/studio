@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Plus, Minus } from 'lucide-react';
 import { teamMembers } from '@/lib/team';
-import imageData from '@/lib/placeholder-images.json';
 import { Card } from '@/components/ui/card';
 import {
   Collapsible,
@@ -12,18 +11,7 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible"
 
-type ImageData = {
-  [key: string]: {
-    imageUrl: string;
-    description: string;
-    imageHint: string;
-    width: number;
-    height: number;
-  };
-};
-
 export function TeamShowcase() {
-  const images = imageData as ImageData;
   const showcasedMembers = teamMembers.slice(0, 4);
 
   return (
@@ -38,7 +26,6 @@ export function TeamShowcase() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {showcasedMembers.map((member) => {
-            const memberImage = images[member.imageId as keyof typeof images];
             const bioSnippet = member.bio ? member.bio.split('\n\n')[0].substring(0, 150) + '...' : '';
 
             return (
@@ -56,14 +43,14 @@ export function TeamShowcase() {
                         </div>
                     </CollapsibleTrigger>
                   </div>
-                  
+
                   <CollapsibleContent className="transition-all duration-500 ease-in-out overflow-hidden data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
                     <div className="px-6 pb-6 pt-0 text-center">
                       <div className="flex flex-col items-center gap-4">
-                        {memberImage && (
+                        {member.image && (
                           <div className="relative">
                             <Image
-                              src={memberImage.imageUrl}
+                              src={member.image}
                               alt={`Portrait of ${member.name}`}
                               width={120}
                               height={120}

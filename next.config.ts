@@ -11,6 +11,7 @@ const nextConfig = {
       { protocol: 'https', hostname: 'cdn.worldvectorlogo.com' },
       { protocol: 'https', hostname: 'picsum.photos' },
       { protocol: 'https', hostname: 'upload.wikimedia.org' },
+      { protocol: 'https', hostname: 'ui-avatars.com' },
     ],
   },
 };
