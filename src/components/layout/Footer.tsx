@@ -35,8 +35,8 @@ export function Footer() {
             <div>
               <h4 className="font-semibold mb-3 ">Legal</h4>
               <ul className="space-y-2">
-                <li><Link href="#" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
-                <li><Link href="#" className="text-muted-foreground hover:text-primary">Terms of Service</Link></li>
+                <li><Link href="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
+                <li><Link href="/terms-of-service" className="text-muted-foreground hover:text-primary">Terms of Service</Link></li>
               </ul>
             </div>
           </div>
@@ -54,7 +54,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} RTG Resto Tech Group. All rights reserved. A Delaware Company.</p>
+          <p>&copy; {new Date().getFullYear()} Resto Tech Group LP. All rights reserved. Resto Tech Group LP is a Delaware Limited Partnership.</p>
         </div>
       </div>
     </footer>
