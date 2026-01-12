@@ -1,6 +1,6 @@
 import { Hero } from '@/components/homepage/Hero';
 import AboutPreview from '@/components/homepage/AboutPreview';
-import { Portfolio } from '@/components/homepage/Portfolio';
+import { CaseStudy } from '@/components/homepage/CaseStudy';
 import { FranchiseSpotlight } from '@/components/homepage/FranchiseSpotlight';
 import { CtaBanner } from '@/components/homepage/CtaBanner';
 import { InquiryForm } from '@/components/homepage/InquiryForm';
@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Hero />
       <AboutPreview />
-      <Portfolio />
+      <CaseStudy />
       <FranchiseSpotlight />
       <CtaBanner />
       <TeamShowcase />

@@ -9,7 +9,6 @@ import { cn } from '@/lib/utils';
 
 const navLinks = [
   { href: '/#about', label: 'About' },
-  { href: '/#portfolio', label: 'Portfolio' },
   { href: '/team', label: 'Team' },
   { href: '/invest', label: 'Invest' },
   { href: '/#contact', label: 'Contact' },
@@ -19,15 +18,15 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center">
+    <header className="sticky top-0 z-50 w-full border-b bg-background shadow-sm">
+      <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center">
           <Image
             src="/RTG-logo.jpg"
             alt="RTG Resto Tech Group"
-            width={80}
-            height={40}
-            className="h-10 w-auto"
+            width={100}
+            height={50}
+            className="h-12 w-auto rounded"
             priority
           />
         </Link>
