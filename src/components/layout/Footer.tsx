@@ -19,7 +19,6 @@ export function Footer() {
               <h4 className="font-semibold mb-3 ">Quick Links</h4>
               <ul className="space-y-2">
                 <li><Link href="/#about" className="text-muted-foreground hover:text-primary">About Us</Link></li>
-                <li><Link href="/#portfolio" className="text-muted-foreground hover:text-primary">Our Portfolio</Link></li>
                 <li><Link href="/team" className="text-muted-foreground hover:text-primary">Our Team</Link></li>
                 <li><Link href="/#contact" className="text-muted-foreground hover:text-primary">Contact</Link></li>
               </ul>
@@ -48,7 +47,7 @@ export function Footer() {
               <Button type="submit" variant="default">Subscribe</Button>
             </form>
             <div className="flex gap-4 mt-2">
-              <Link href="#" aria-label="LinkedIn"><Linkedin className="h-6 w-6 text-muted-foreground hover:text-primary" /></Link>
+              <Link href="https://www.linkedin.com/company/resto-tech-group-lp/" aria-label="LinkedIn"><Linkedin className="h-6 w-6 text-muted-foreground hover:text-primary" /></Link>
               <Link href="#" aria-label="Instagram"><Instagram className="h-6 w-6 text-muted-foreground hover:text-primary" /></Link>
             </div>
           </div>

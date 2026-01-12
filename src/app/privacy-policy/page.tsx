@@ -15,7 +15,7 @@ export default function PrivacyPolicyPage() {
       <div className="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-card rounded-lg shadow-lg p-8 md:p-12">
           <h1 className="text-3xl md:text-4xl font-bold text-primary mb-2">
-            RESTOTECH GROUP LP PRIVACY POLICY
+            RESTO TECH GROUP LP PRIVACY POLICY
           </h1>
           <p className="text-muted-foreground mb-8">
             <strong>Effective Date:</strong> January 2, 2026
