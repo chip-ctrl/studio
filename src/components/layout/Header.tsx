@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
@@ -7,7 +8,6 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
   { href: '/#about', label: 'About' },
   { href: '/#portfolio', label: 'Portfolio' },
   { href: '/team', label: 'Team' },
@@ -21,7 +21,16 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
-        <div className="mr-6" />
+        <Link href="/" className="mr-6 flex items-center">
+          <Image
+            src="/RTG-logo.jpg"
+            alt="RTG Resto Tech Group"
+            width={80}
+            height={40}
+            className="h-10 w-auto"
+            priority
+          />
+        </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           {navLinks.map((link) => (
             <Link
@@ -53,7 +62,13 @@ export function Header() {
                   href="/"
                   className="flex items-center gap-2 text-lg font-semibold"
                 >
-                  <span className="sr-only">RTG Resto Tech Group</span>
+                  <Image
+                    src="/RTG-logo.jpg"
+                    alt="RTG Resto Tech Group"
+                    width={80}
+                    height={40}
+                    className="h-10 w-auto"
+                  />
                 </Link>
                 {navLinks.map((link) => (
                   <Link
