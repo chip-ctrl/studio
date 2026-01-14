@@ -20,21 +20,21 @@ export function Hero() {
         data-ai-hint={heroImage.imageHint}
       />
       <div className="absolute inset-0 bg-black/50" />
-      <div className="relative z-10 container text-center space-y-6">
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-center">
+      <div className="relative z-10 container text-center space-y-4 sm:space-y-6 px-4">
+        <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold tracking-tight leading-tight text-center">
           Investing in great hospitality businesses — and elevating them through technology, experience, and operational excellence.
         </h1>
-        <p className="text-lg md:text-xl text-primary-foreground/80 max-w-3xl mx-auto">
+        <p className="text-base sm:text-lg md:text-xl text-primary-foreground/80 max-w-3xl mx-auto">
           100+ years of operational excellence meets innovation.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild size="lg" >
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+          <Button asChild size="lg" className="text-sm sm:text-base">
             <Link href="#contact">Sell Your Business</Link>
           </Button>
-          <Button asChild size="lg">
+          <Button asChild size="lg" className="text-sm sm:text-base">
             <Link href="#franchise">Franchise With Us</Link>
           </Button>
-          <Button asChild size="lg" >
+          <Button asChild size="lg" className="text-sm sm:text-base">
             <Link href="#contact">Partner With RTG</Link>
           </Button>
         </div>

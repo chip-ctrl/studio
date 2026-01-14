@@ -163,13 +163,14 @@ export function CaseStudy() {
                 <p className="text-sm text-muted-foreground mt-1">7-Month Transformation Impact</p>
               </CardHeader>
               <CardContent className="p-0">
-                <div className="overflow-x-auto">
+                {/* Desktop Table View */}
+                <div className="hidden md:block overflow-x-auto">
                   <table className="w-full">
                     <thead>
                       <tr className="border-b bg-muted/50">
                         <th className="text-left p-4 font-semibold text-primary">Category</th>
                         <th className="text-center p-4 font-semibold text-primary">Performance</th>
-                        <th className="text-right p-4 font-semibold text-primary hidden md:table-cell">Benchmark</th>
+                        <th className="text-right p-4 font-semibold text-primary">Benchmark</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -189,13 +190,30 @@ export function CaseStudy() {
                               {metric.performance}
                             </Badge>
                           </td>
-                          <td className="p-4 text-right text-sm text-muted-foreground hidden md:table-cell">
+                          <td className="p-4 text-right text-sm text-muted-foreground">
                             {metric.benchmark}
                           </td>
                         </tr>
                       ))}
                     </tbody>
                   </table>
+                </div>
+                {/* Mobile Card View */}
+                <div className="md:hidden divide-y">
+                  {performanceMetrics.map((metric, index) => (
+                    <div key={index} className="p-4 space-y-2">
+                      <div className="flex items-start justify-between gap-2">
+                        <span className="font-medium text-foreground text-sm">{metric.category}</span>
+                        <Badge
+                          variant="outline"
+                          className="bg-green-50 text-green-700 border-green-200 font-semibold px-2 py-0.5 text-xs shrink-0"
+                        >
+                          {metric.performance}
+                        </Badge>
+                      </div>
+                      <p className="text-xs text-muted-foreground">{metric.benchmark}</p>
+                    </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>

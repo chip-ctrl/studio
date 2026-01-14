@@ -89,12 +89,12 @@ export default function AboutPreview() {
               <Link href="/team">Meet Our Team</Link>
             </Button>
           </div>
-          <div className="space-y-8">
-            <h3 className="text-2xl font-bold text-center text-primary">A Legacy of Leadership with World-Class Brands</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+          <div className="space-y-6 sm:space-y-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-center text-primary">A Legacy of Leadership with World-Class Brands</h3>
+            <div className="grid grid-cols-3 sm:grid-cols-4 gap-3 sm:gap-6">
               {brands.map((brand) => (
-                <div key={brand.name} className="flex justify-center items-center p-4 bg-background rounded-lg shadow-sm">
-                  <div className="relative h-16 w-32">
+                <div key={brand.name} className="flex justify-center items-center p-2 sm:p-4 bg-background rounded-lg shadow-sm">
+                  <div className="relative h-10 w-20 sm:h-16 sm:w-32">
                     <Image
                       src={brand.logoUrl}
                       alt={`${brand.name} logo`}

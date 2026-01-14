@@ -73,8 +73,8 @@ export function Portfolio() {
               );
             })}
           </CarouselContent>
-          <CarouselPrevious className="ml-14" />
-          <CarouselNext className="mr-14" />
+          <CarouselPrevious className="hidden sm:flex ml-14" />
+          <CarouselNext className="hidden sm:flex mr-14" />
         </Carousel>
       </div>
     </section>

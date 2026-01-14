@@ -22,8 +22,8 @@ export default function TeamMemberPage({ params }: { params: Promise<{ memberId:
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto bg-background rounded-lg shadow-2xl overflow-hidden">
           <div className="grid md:grid-cols-3">
-            <div className="md:col-span-1 p-8 flex flex-col items-center text-center">
-              <div className="relative w-48 h-48 mb-4">
+            <div className="md:col-span-1 p-4 sm:p-8 flex flex-col items-center text-center">
+              <div className="relative w-32 h-32 sm:w-48 sm:h-48 mb-4">
                 {member.image && (
                   <Image
                     src={member.image}
@@ -35,12 +35,12 @@ export default function TeamMemberPage({ params }: { params: Promise<{ memberId:
                   />
                 )}
               </div>
-              <h1 className="text-3xl font-bold text-primary mt-4 text-center">{member.name}</h1>
-              <p className="text-lg text-muted-foreground mt-1">{member.title}</p>
+              <h1 className="text-2xl sm:text-3xl font-bold text-primary mt-2 sm:mt-4 text-center">{member.name}</h1>
+              <p className="text-base sm:text-lg text-muted-foreground mt-1">{member.title}</p>
             </div>
-            <div className="md:col-span-2 p-8">
-              <h2 className="text-2xl font-bold text-primary mb-4 text-center">Biography</h2>
-              <div className="space-y-4 text-foreground/80 prose prose-lg max-w-none">
+            <div className="md:col-span-2 p-4 sm:p-8">
+              <h2 className="text-xl sm:text-2xl font-bold text-primary mb-4 text-center">Biography</h2>
+              <div className="space-y-4 text-foreground/80 prose prose-sm sm:prose-lg max-w-none">
                 {bioParagraphs.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
