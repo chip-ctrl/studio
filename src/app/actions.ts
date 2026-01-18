@@ -1,8 +1,7 @@
 'use server';
 
 import { z } from 'zod';
-import { db } from '@/lib/firebase';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { Resend } from 'resend';
 
 const inquirySchema = z.object({
   name: z.string().min(2),
@@ -15,14 +14,6 @@ const subscribeSchema = z.object({
   email: z.string().email(),
 });
 
-// Helper to add timeout to promises
-function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
-  const timeout = new Promise<never>((_, reject) =>
-    setTimeout(() => reject(new Error('Request timeout')), ms)
-  );
-  return Promise.race([promise, timeout]);
-}
-
 export async function handleSubscribe(data: unknown): Promise<{ success?: string; error?: string }> {
   const parsed = subscribeSchema.safeParse(data);
 
@@ -30,25 +21,32 @@ export async function handleSubscribe(data: unknown): Promise<{ success?: string
     return { error: 'Please enter a valid email address.' };
   }
 
-  // Check if Firebase is configured
-  if (!process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID) {
-    console.error('Firebase not configured');
+  if (!process.env.RESEND_API_KEY || !process.env.RESEND_AUDIENCE_ID) {
+    console.error('Resend not configured');
     return { error: 'Service temporarily unavailable. Please try again later.' };
   }
 
   try {
-    await withTimeout(
-      addDoc(collection(db, 'subscribers'), {
-        email: parsed.data.email,
-        subscribedAt: serverTimestamp(),
-        status: 'active',
-      }),
-      10000 // 10 second timeout
-    );
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
+    // Add contact to Resend Audience for newsletter broadcasts
+    const result = await resend.contacts.create({
+      email: parsed.data.email,
+      audienceId: process.env.RESEND_AUDIENCE_ID,
+    });
+
+    if (result.error) {
+      // Check if already subscribed
+      if (result.error.message?.includes('already exists')) {
+        return { success: 'You are already subscribed!' };
+      }
+      console.error('Resend error:', result.error);
+      return { error: 'Failed to subscribe. Please try again later.' };
+    }
 
     return { success: 'Thank you for subscribing!' };
   } catch (error) {
-    console.error('Error saving subscriber to Firestore:', error);
+    console.error('Subscribe error:', error);
     return { error: 'Failed to subscribe. Please try again later.' };
   }
 }
@@ -61,28 +59,43 @@ export async function handleInquiry(data: unknown): Promise<{ success?: string; 
     return { error: 'Invalid data provided. Please check the form and try again.' };
   }
 
-  // Check if Firebase is configured
-  if (!process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID) {
-    console.error('Firebase not configured');
-    return { error: 'Service temporarily unavailable. Please try again later.' };
-  }
+  const { name, email, subject, message } = parsed.data;
 
   try {
-    // Save to Firestore with timeout
-    await withTimeout(
-      addDoc(collection(db, 'inquiries'), {
-        ...parsed.data,
-        createdAt: serverTimestamp(),
-        status: 'new',
-      }),
-      10000 // 10 second timeout
-    );
+    // Send email notification using Resend
+    if (process.env.RESEND_API_KEY) {
+      const resend = new Resend(process.env.RESEND_API_KEY);
 
-    console.log('Inquiry saved to Firestore:', parsed.data);
+      // Use CONTACT_EMAIL env var, fallback to verified email for Resend free tier
+      const contactEmail = process.env.CONTACT_EMAIL || 'rkrajib345@gmail.com';
+
+      const emailResult = await resend.emails.send({
+        from: 'RTG Website <onboarding@resend.dev>',
+        to: contactEmail,
+        replyTo: email,
+        subject: `New Contact Form: ${subject}`,
+        html: `
+          <h2>New Contact Form Submission</h2>
+          <p><strong>From:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Subject:</strong> ${subject}</p>
+          <hr />
+          <p><strong>Message:</strong></p>
+          <p>${message.replace(/\n/g, '<br>')}</p>
+          <hr />
+          <p style="color: #666; font-size: 12px;">This message was sent from the RTG Resto Tech Group website contact form.</p>
+        `,
+      });
+
+      if (emailResult.error) {
+        console.error('Resend error:', emailResult.error);
+        return { error: 'Failed to send your message. Please try again later.' };
+      }
+    }
 
     return { success: 'Thank you for your message. We will be in touch shortly!' };
   } catch (error) {
-    console.error('Error saving inquiry to Firestore:', error);
+    console.error('Error handling inquiry:', error);
     return { error: 'Failed to submit your message. Please try again later.' };
   }
 }
