@@ -10,7 +10,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
 import { handleInquiry } from '@/app/actions';
-import { useEffect, useTransition } from 'react';
+import { Suspense, useEffect, useTransition } from 'react';
 import { useSearchParams } from 'next/navigation';
 
 const subjectMap: Record<string, string> = {
@@ -26,7 +26,7 @@ const formSchema = z.object({
   message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
 });
 
-export function InquiryForm() {
+function InquiryFormContent() {
   const { toast } = useToast();
   const [isPending, startTransition] = useTransition();
   const searchParams = useSearchParams();
@@ -162,5 +162,35 @@ export function InquiryForm() {
         </Card>
       </div>
     </section>
+  );
+}
+
+export function InquiryForm() {
+  return (
+    <Suspense fallback={
+      <section id="contact" className="py-16 md:py-24 bg-secondary">
+        <div className="container">
+          <Card className="max-w-2xl mx-auto shadow-lg">
+            <CardHeader className="text-center">
+              <CardTitle className="text-3xl text-center">Let&apos;s Connect</CardTitle>
+              <CardDescription>
+                Whether you&apos;re looking to sell, partner, or franchise, we&apos;re ready to listen.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-6 animate-pulse">
+                <div className="h-10 bg-muted rounded" />
+                <div className="h-10 bg-muted rounded" />
+                <div className="h-10 bg-muted rounded" />
+                <div className="h-32 bg-muted rounded" />
+                <div className="h-12 bg-muted rounded" />
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+    }>
+      <InquiryFormContent />
+    </Suspense>
   );
 }
