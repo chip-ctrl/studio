@@ -79,21 +79,21 @@ export default function AboutPreview() {
             <h2 className="text-3xl md:text-4xl font-bold text-primary">
               Experience Meets Innovation
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               RTG Resto Tech Group was founded on a simple premise: great hospitality businesses deserve to become enduring enterprises. We bridge the gap between operational excellence and technological innovation, turning promising restaurants into scalable, resilient brands.
             </p>
-            <p className="text-muted-foreground">
-              Our team brings over 100 years of combined experience from the world’s most recognized restaurant brands. We don't just invest; we partner, rolling up our sleeves to implement the systems, processes, and strategies that drive sustainable growth and profitability.
+            <p className="text-muted-foreground leading-relaxed">
+              Our team brings over 100 years of combined experience from the world's most recognized restaurant brands. We don't just invest; we partner, rolling up our sleeves to implement the systems, processes, and strategies that drive sustainable growth and profitability.
             </p>
             <Button asChild size="lg">
               <Link href="/team">Meet Our Team</Link>
             </Button>
           </div>
           <div className="space-y-6 sm:space-y-8">
-            <h3 className="text-xl sm:text-2xl font-bold text-center text-primary">A Legacy of Leadership with World-Class Brands</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold text-center text-foreground">A Legacy of Leadership with World-Class Brands</h3>
             <div className="grid grid-cols-3 sm:grid-cols-4 gap-3 sm:gap-6">
               {brands.map((brand) => (
-                <div key={brand.name} className="flex justify-center items-center p-2 sm:p-4 bg-background rounded-lg shadow-sm">
+                <div key={brand.name} className="flex justify-center items-center p-2 sm:p-4 bg-background rounded-lg shadow-sm hover:shadow-md transition-shadow">
                   <div className="relative h-10 w-20 sm:h-16 sm:w-32">
                     <Image
                       src={brand.logoUrl}
