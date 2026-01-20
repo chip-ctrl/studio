@@ -67,7 +67,7 @@ export async function handleInquiry(data: unknown): Promise<{ success?: string; 
       const resend = new Resend(process.env.RESEND_API_KEY);
 
       // Use CONTACT_EMAIL env var, fallback to verified email for Resend free tier
-      const contactEmail = process.env.CONTACT_EMAIL || 'rkrajib345@gmail.com';
+      const contactEmail = process.env.CONTACT_EMAIL || 'chip@oldfourthcapital.com';
 
       const emailResult = await resend.emails.send({
         from: 'RTG Website <onboarding@resend.dev>',
