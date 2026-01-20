@@ -10,7 +10,14 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
 import { handleInquiry } from '@/app/actions';
-import { useState, useTransition } from 'react';
+import { useEffect, useTransition } from 'react';
+import { useSearchParams } from 'next/navigation';
+
+const subjectMap: Record<string, string> = {
+  sell: 'Sell Your Business',
+  franchise: 'Franchise With Us',
+  partner: 'Partner With RTG',
+};
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -22,6 +29,7 @@ const formSchema = z.object({
 export function InquiryForm() {
   const { toast } = useToast();
   const [isPending, startTransition] = useTransition();
+  const searchParams = useSearchParams();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -32,6 +40,20 @@ export function InquiryForm() {
       message: '',
     },
   });
+
+  useEffect(() => {
+    const subjectParam = searchParams.get('subject');
+    if (subjectParam && subjectMap[subjectParam]) {
+      form.setValue('subject', subjectMap[subjectParam]);
+      // Scroll to contact section
+      setTimeout(() => {
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [searchParams, form]);
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     startTransition(async () => {
@@ -97,7 +119,7 @@ export function InquiryForm() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>I'm interested in...</FormLabel>
-                       <Select onValueChange={field.onChange} defaultValue={field.value}>
+                       <Select onValueChange={field.onChange} value={field.value}>
                         <FormControl>
                           <SelectTrigger>
                             <SelectValue placeholder="Select a subject" />

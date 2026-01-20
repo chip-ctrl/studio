@@ -29,13 +29,13 @@ export function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
           <Button asChild size="lg" className="text-sm sm:text-base">
-            <Link href="#contact">Sell Your Business</Link>
+            <Link href="/?subject=sell#contact">Sell Your Business</Link>
           </Button>
           <Button asChild size="lg" className="text-sm sm:text-base">
-            <Link href="#franchise">Franchise With Us</Link>
+            <Link href="/?subject=franchise#contact">Franchise With Us</Link>
           </Button>
           <Button asChild size="lg" className="text-sm sm:text-base">
-            <Link href="#contact">Partner With RTG</Link>
+            <Link href="/?subject=partner#contact">Partner With RTG</Link>
           </Button>
         </div>
       </div>

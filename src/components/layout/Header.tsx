@@ -46,7 +46,7 @@ export function Header() {
         </nav>
         <div className="flex flex-1 items-center justify-end gap-4">
           <Button asChild className="hidden md:flex">
-            <Link href="/#contact">Partner With RTG</Link>
+            <Link href="/?subject=partner#contact">Partner With RTG</Link>
           </Button>
           <Sheet>
             <SheetTrigger asChild>
