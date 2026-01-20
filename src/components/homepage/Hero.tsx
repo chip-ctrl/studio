@@ -32,7 +32,7 @@ export function Hero() {
             <Link href="/?subject=sell#contact">Sell Your Business</Link>
           </Button>
           <Button asChild size="lg" className="text-sm sm:text-base">
-            <Link href="/?subject=franchise#contact">Franchise With Us</Link>
+            <Link href="/#franchise">Franchise With Us</Link>
           </Button>
           <Button asChild size="lg" className="text-sm sm:text-base">
             <Link href="/?subject=partner#contact">Partner With RTG</Link>

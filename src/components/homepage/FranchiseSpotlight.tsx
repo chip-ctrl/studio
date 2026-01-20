@@ -33,7 +33,7 @@ export function FranchiseSpotlight() {
               We provide the playbook, technology, and support network you need to thrive in a competitive market.
             </p>
             <Button asChild size="lg" className="mt-4">
-              <Link href="#contact">
+              <Link href="/?subject=franchise#contact">
                 Explore Franchise Opportunities
                 <ArrowRight className="ml-2" />
               </Link>
