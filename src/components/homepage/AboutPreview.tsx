@@ -82,7 +82,7 @@ export default function AboutPreview() {
             <p className="text-lg text-muted-foreground leading-relaxed">
               RTG Resto Tech Group was founded on a simple premise: great hospitality businesses deserve to become enduring enterprises. We bridge the gap between operational excellence and technological innovation, turning promising restaurants into scalable, resilient brands.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               Our team brings over 100 years of combined experience from the world's most recognized restaurant brands. We don't just invest; we partner, rolling up our sleeves to implement the systems, processes, and strategies that drive sustainable growth and profitability.
             </p>
             <Button asChild size="lg">
